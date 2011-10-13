@@ -34,13 +34,13 @@ html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-
 
 body { margin: 0; font-size: 20px; line-height: 1.231; background-color: #f0f0f0; font-family: sans-serif; color: #222; }
 
+footer { margin: 1em; font-size: 0.75em; text-align: center; }
+
+header { text-align: center; }
+
 #container { margin: auto; width: 40em; }
 
 #main { background-color: #fefefe; padding: 0.25em 1em; margin: 1.25em 0; border: 0.05em solid #999; border-radius: 0.25em; }
-
-footer { margin: 1em; font-size: 0.75em; text-align: center; }
-
-h1 { text-align: center; }
 
 /* 
  * Remove text-shadow in selection highlight: h5bp.com/i
