@@ -1,0 +1,73 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>editconfig</title>
+  <meta name="description" content="Configuration file format for defining indentation styles in shared projects.">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <h1>Editorconfig</h1>
+    </header>
+    <div id="main" role="main">
+
+      <section>
+
+        <h2>What is Editorconfig?</h2>
+
+        <p><dfn>Editorconfig</dfn> is an initiative for solving the "my indentation style is different than yours" problem common amongst open source projects.  An Editorconfig file is used to define the recommended indentation styles for a group of files.  The goal of this project is to finalize the Editorconfig file format and create plugins to add Editorconfig support to popular text editors and <abbr title="integrated development environment">IDEs</abbr>.</p>
+
+        </section>
+
+      <section>
+
+        <h2>What's an Editorconfig file look like?</h2>
+
+        <p>The Editorconfig file format is not yet finalized.  This is the definition for the current editconfig version pending finalization (v0.1).</p>
+
+        <p>Editorconfig files use an INI file format with sections names are globs matching filenames.  The property <code>indent_style</code> can be defined as "tab" or "space" to use hard tabs or spaces respectively.  If spaces are used (<code>indent_style=space</code>), the <code>tab_width</code> should contain the number of spaces to use for each indentation level.</p>
+
+        <h3>Example file</h3>
+        <p>The below file specifies that all files with a <code>py</code> file extension (Python files) use 4 spaces for indentation and all files with a <code>js</code> file extension (JavaScript files) use tabs for indentation.</p>
+
+        <code>
+        <pre>
+[*.py]
+indent_style = space
+tab_width = 4
+
+[*.js]
+indent_style = tab
+        </pre>
+        </code>
+
+        <h3>Where are these files stored?</h3>
+
+        <p>When a file is opened in a text editor with an Editorconfig plugin, a search is performed in the current directory and all parent directories for a file called <code>.editconfig</code>.  All found <code>.editconfig</code> files are searched for sections with filename globs matching the current filename.  If multiple <code>.editconfig</code> files have matching globs, the rules from the closer <code>.editconfig</code> file takes precedence.</p>
+
+        <p>In the above example, editors should use 4 spaces for indenting when editing the Python files in the project and hard tabs for indenting in JavaScript files.</p>
+      </div>
+
+    </section>
+
+    <footer>
+      <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Editorconfig</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+    </footer>
+  </div>
+
+</body>
+</html>
