@@ -9,6 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>editconfig</title>
+  <meta name="author" content="Trey Hunner">
   <meta name="description" content="Configuration file format for defining indentation styles in shared projects.">
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -60,9 +61,26 @@ indent_style = tab
         <p>When a file is opened in a text editor with an Editorconfig plugin, a search is performed in the current directory and all parent directories for a file called <code>.editconfig</code>.  All found <code>.editconfig</code> files are searched for sections with filename globs matching the current filename.  If multiple <code>.editconfig</code> files have matching globs, the rules from the closer <code>.editconfig</code> file takes precedence.</p>
 
         <p>In the above example, editors should use 4 spaces for indenting when editing the Python files in the project and hard tabs for indenting in JavaScript files.</p>
-      </div>
 
-    </section>
+      </section>
+
+      <section>
+
+      <h2>Supported text editors</h2>
+
+      <p>The Editorconfig file format is not finalized yet (I just created it), but I've made a vim plugin to demonstrate and test the format so far.  You can <a href="https://github.com/treyhunner/editorconfig-vim">find the editorconfig vim plugin here</a>.  Eventually I'd like to write plugins for other popular text editors, but the file format needs to be defined a little more clearly first.</p>
+
+      </section>
+
+      <section>
+
+      <h2>Contributing to Editorconfig</h2>
+
+      <p>Editorconfig was created by <a href="https://github.com/treyhunner">Trey Hunner</a> after contributing to multiple open source projects with differing (and sometimes inconsistent) indentation styles.  This project is greatly in need of feedback from other developers.  I want to hear about flaws in my approach to this problem, so please head over to <a href="https://github.com/treyhunner/editorconfig/issues">the issue tracker</a> and voice your opinion.</p>
+
+      </section>
+
+    </div>
 
     <footer>
       <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Editorconfig</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
