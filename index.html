@@ -38,7 +38,7 @@
 
         <h2>What's an Editorconfig file look like?</h2>
 
-        <p>The Editorconfig file format is not yet finalized.  This is the definition for the current editconfig version pending finalization (v0.1).</p>
+        <p>The Editorconfig file format is not yet finalized.  This is the definition for the current editorconfig version pending finalization (v0.1).</p>
 
         <p>Editorconfig files use an INI file format with sections names are globs matching filenames.  The property <code>indent_style</code> can be defined as "tab" or "space" to use hard tabs or spaces respectively.  If spaces are used (<code>indent_style=space</code>), the <code>tab_width</code> should contain the number of spaces to use for each indentation level.</p>
 
@@ -58,7 +58,7 @@ indent_style = tab
 
         <h3>Where are these files stored?</h3>
 
-        <p>When a file is opened in a text editor with an Editorconfig plugin, a search is performed in the current directory and all parent directories for a file called <code>.editconfig</code>.  All found <code>.editconfig</code> files are searched for sections with filename globs matching the current filename.  If multiple <code>.editconfig</code> files have matching globs, the rules from the closer <code>.editconfig</code> file takes precedence.</p>
+        <p>When a file is opened in a text editor with an Editorconfig plugin, a search is performed in the current directory and all parent directories for a file called <code>.editorconfig</code>.  All found <code>.editorconfig</code> files are searched for sections with filename globs matching the current filename.  If multiple <code>.editorconfig</code> files have matching globs, the rules from the closer <code>.editorconfig</code> file takes precedence.</p>
 
         <p>In the above example, editors should use 4 spaces for indenting when editing the Python files in the project and hard tabs for indenting in JavaScript files.</p>
         
