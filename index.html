@@ -30,7 +30,7 @@
 
         <h2>What is Editorconfig?</h2>
 
-        <p><dfn>Editorconfig</dfn> is an initiative for solving the "my indentation style is different than yours" problem common amongst open source projects.  An Editorconfig file is used to define the recommended indentation styles for a group of files.  The goal of this project is to finalize the Editorconfig file format and create plugins to add Editorconfig support to popular text editors and <abbr title="integrated development environment">IDEs</abbr>.</p>
+        <p>Editorconfig is an initiative for solving the "my indentation style is different than yours" problem common amongst open source projects.  An Editorconfig file is used to define the recommended indentation styles for a group of files.  The goal of this project is to finalize the Editorconfig file format and create plugins to add Editorconfig support to popular text editors and <abbr title="integrated development environment">IDEs</abbr>.</p>
 
         </section>
 
@@ -38,9 +38,7 @@
 
         <h2>What's an Editorconfig file look like?</h2>
 
-        <p>The Editorconfig file format is not yet finalized.  This is the definition for the current editorconfig version pending finalization (v0.1).</p>
-
-        <p>Editorconfig files use an INI file format with sections names are globs matching filenames.  The property <code>indent_style</code> can be defined as "tab" or "space" to use hard tabs or spaces respectively.  If spaces are used (<code>indent_style=space</code>), the <code>tab_width</code> should contain the number of spaces to use for each indentation level.</p>
+        <p>The Editorconfig file format is not yet finalized.  This is the definition for the current editorconfig version pending finalization (v0.2).</p>
 
         <h3>Example file</h3>
         <p>The below file specifies that all files with a <code>py</code> file extension (Python files) use 4 spaces for indentation and all files with a <code>js</code> file extension (JavaScript files) use tabs for indentation.</p>
@@ -56,6 +54,10 @@ indent_style = tab
         </pre>
         </code>
 
+        <h3>Details of the file format</h3>
+
+        <p>Editorconfig files use an INI file format in which sections names are <a href="http://en.wikipedia.org/wiki/Glob_(programming)">globs</a> matching filenames in the format accepted by the <a href="http://linux.die.net/man/3/fnmatch">fnmatch</a> C library.  The property <code>indent_style</code> can be defined as "tab" or "space" to use hard tabs or spaces respectively.  If spaces are used (<code>indent_style=space</code>), the <code>tab_width</code> property should be set to the number of spaces used for each indentation level.  Comments can be added to these files by prepending a semicolon (<code>;</code>) to the beginning of a line.  Comments and blank lines are ignored when parsing these files.</p>
+
         <h3>Where are these files stored?</h3>
 
         <p>When a file is opened in a text editor with an Editorconfig plugin, a search is performed in the current directory and all parent directories for a file called <code>.editorconfig</code>.  All found <code>.editorconfig</code> files are searched for sections with filename globs matching the current filename.  If multiple <code>.editorconfig</code> files have matching globs, the rules from the closer <code>.editorconfig</code> file takes precedence.</p>
@@ -70,7 +72,7 @@ indent_style = tab
 
       <h2>Supported text editors</h2>
 
-      <p>The Editorconfig file format is not finalized yet (I just created it), but I've made a vim plugin to demonstrate and test the format so far.  You can <a href="https://github.com/treyhunner/editorconfig-vim">find the editorconfig vim plugin here</a>.  Eventually I'd like to write plugins for other popular text editors, but the file format needs to be defined a little more clearly first.</p>
+      <p>The Editorconfig file format is not finalized yet, but there's a vim plugin to demonstrate and test the format so far.  You can <a href="https://github.com/treyhunner/editorconfig-vim">find the editorconfig vim plugin here</a>.  Eventually the file format will be finalized and plugins will be written for other popular text editors.</p>
 
       </section>
 
@@ -78,7 +80,7 @@ indent_style = tab
 
       <h2>Contributing to Editorconfig</h2>
 
-      <p>Editorconfig was created by <a href="https://github.com/treyhunner">Trey Hunner</a> after contributing to multiple open source projects with differing (and sometimes inconsistent) indentation styles.  This project is greatly in need of feedback from other developers.  I want to hear about flaws in my approach to this problem, so please head over to <a href="https://github.com/treyhunner/editorconfig/issues">the issue tracker</a> and voice your opinion.</p>
+      <p>This project is greatly in need of feedback from other developers.  We want to hear ideas about how to make this project better.  Please use the <a href="http://groups.google.com/group/editorconfig">mailing list</a> to send an email to the editorconfig team and use the <a href="https://github.com/treyhunner/editorconfig/issues">issue tracker</a> to submit bugs.</p>
 
       </section>
 
