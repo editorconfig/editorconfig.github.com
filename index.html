@@ -54,10 +54,6 @@ indent_style = tab
         </pre>
         </code>
 
-        <h3>Details of the file format</h3>
-
-        <p>Editorconfig files use an INI file format in which sections names are <a href="http://en.wikipedia.org/wiki/Glob_(programming)">globs</a> matching filenames in the format accepted by the <a href="http://www.freebsd.org/cgi/man.cgi?query=fnmatch">fnmatch</a> C library.  The property <code>indent_style</code> can be defined as "tab" or "space" to use hard tabs or spaces respectively.  If spaces are used (<code>indent_style=space</code>), the <code>tab_width</code> property should be set to the number of spaces used for each indentation level.  Comments can be added to these files by prepending a semicolon (<code>;</code>) to the beginning of a line.  Comments and blank lines are ignored when parsing these files.</p>
-
         <h3>Where are these files stored?</h3>
 
         <p>When a file is opened in a text editor with an Editorconfig plugin, a search is performed in the current directory and all parent directories for a file called <code>.editorconfig</code>.  All found <code>.editorconfig</code> files are searched for sections with filename globs matching the current filename.  If multiple <code>.editorconfig</code> files have matching globs, the rules from the closer <code>.editorconfig</code> file takes precedence.</p>
@@ -65,6 +61,21 @@ indent_style = tab
         <p>In the above example, editors should use 4 spaces for indenting when editing the Python files in the project and hard tabs for indenting in JavaScript files.</p>
         
         <p>Check out <a href="https://github.com/treyhunner/editorconfig/blob/gh-pages/.editorconfig">the Editorconfig file for this website</a> which defines 2 spaces for indentation of HTML and CSS files.</p>
+
+        <h3>Details of the file format</h3>
+
+        <p>Editorconfig files use an INI file format in which sections names are <a href="http://en.wikipedia.org/wiki/Glob_(programming)">globs</a> matching filenames in the format accepted by the <a href="http://www.freebsd.org/cgi/man.cgi?query=fnmatch">fnmatch</a> C library.  Comments can be added to these files by prepending a semicolon (<code>;</code>) to the beginning of a line.  Comments and blank lines are ignored when parsing these files.</p>
+
+        <h3>Supported properties</h3>
+        <p>Editorconfig file sections contain <dfn>properties</dfn>, which are name-value pairs separated by an equal sign (<code>=</code>).  Property names can contain letters, numbers, and underscores.  Editorconfig plugins will ignore any unrecognized property names and any properties with invalid values.</p>
+        
+        <p>Here is the list of all property names understood by Editorconfig and all valid values for these properties:</p>
+
+        <ul class="property-definitions">
+          <li><dfn>indent_style</dfn>: can be set to <q>tab</q> or <q>space</q> to use hard tabs or spaces respectively.</li>
+          <li><dfn>tab_width</dfn>: if <code>indent_style</code> is <q>space</q>, this should be a whole number defining the number of spaces used for each indentation level.</li>
+        </ul>
+
 
       </section>
 

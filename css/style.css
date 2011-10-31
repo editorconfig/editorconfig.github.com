@@ -89,6 +89,11 @@ ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
 dd { margin: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
+ul.property-definitions { list-style: none; lyst-style-image: none; margin: 0; padding: 0; }
+ul.property-definitions li { margin: 1em 0 1em 1em; }
+.property-definitions dfn { font-style: normal; font-weight: bold; }
+.property-definitions q { font-family: monospace; }
+
 
 /* ==|== print styles =======================================================
    Print styles.
