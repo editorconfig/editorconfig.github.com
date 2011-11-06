@@ -71,7 +71,20 @@ indent_style = tab
 
         <p>EditorConfig files use an INI file format in which sections names are <a href="http://en.wikipedia.org/wiki/Glob_(programming)">globs</a> matching filenames in the format accepted by the <a href="http://www.freebsd.org/cgi/man.cgi?query=fnmatch">fnmatch</a> C library.  Comments can be added to these files by prepending a semicolon (<code>;</code>) to the beginning of a line.  Comments and blank lines are ignored when parsing these files.</p>
 
-        <h3 id="supported-properties">Supported properties</h3>
+        <h4 class="wildcards">Wildcard patterns</h4>
+
+        <p>Section names in EditorConfig files are file globs.  These file globs support pattern matching through Unix shell-style wildcards.  The following special characters are used in these shell-style wildcards:</p>
+
+        <table>
+          <tr><td><code>*</code></td><td>Matches any string of characters, except for path separators (<code>/</code> character)</td></tr>
+          <tr><td><code>?</code></td><td>Matches any single character</td></tr>
+          <tr><td><code>[seq]</code></td><td>Matches any single character in <i>seq</i></td></tr>
+          <tr><td><code>[!seq]</code></td><td>Matches any single character not in <i>seq</i></td></tr>
+        </table>
+
+        <p>The backslash character (<code>\</code>) can be used to escape a character so it is not interpreted as a special character.</p>
+
+        <h4 id="supported-properties">Supported properties</h4>
         <p>EditorConfig file sections contain <dfn>properties</dfn>, which are name-value pairs separated by an equal sign (<code>=</code>).  Property names can contain letters, numbers, and underscores.  EditorConfig plugins will ignore any unrecognized property names and any properties with invalid values.</p>
         
         <p>Here is the list of all property names understood by EditorConfig and all valid values for these properties:</p>
@@ -80,7 +93,6 @@ indent_style = tab
           <li><dfn>indent_style</dfn>: can be set to <q>tab</q> or <q>space</q> to use hard tabs or spaces respectively.</li>
           <li><dfn>tab_width</dfn>: if <code>indent_style</code> is <q>space</q>, this should be a whole number defining the number of spaces used for each indentation level.</li>
         </ul>
-
 
       </section>
 
