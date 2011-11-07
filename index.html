@@ -45,25 +45,26 @@
 
         <h2 id="file-format">What's an EditorConfig file look like?</h2>
 
-        <p>The EditorConfig file format is not yet finalized.  This is the definition for the current editorconfig version pending finalization (v0.2).</p>
+        <p>The EditorConfig file format is not yet finalized.  This is the definition for the current editorconfig version pending finalization (v0.3).</p>
 
         <h3 id="example-file">Example file</h3>
-        <p>The below file specifies that all files with a <code>py</code> file extension (Python files) use 4 spaces for indentation and all files with a <code>js</code> file extension (JavaScript files) use tabs for indentation.</p>
+        <p>The below file specifies that all files with a <code>py</code> file extension (Python files) use 4 spaces for indentation and all files with a <code>js</code> file extension (JavaScript files) use tabs for indentation with 2 columns used to for tabs.</p>
 
         <pre>
 [*.py]
 indent_style = space
-tab_width = 4
+indent_size = 4
 
 [*.js]
 indent_style = tab
+tab_width = 2
         </pre>
 
         <h3 id="file-location">Where are these files stored?</h3>
 
         <p>When a file is opened in a text editor with an EditorConfig plugin, a search is performed in the current directory and all parent directories for a file called <code>.editorconfig</code>.  All found <code>.editorconfig</code> files are searched for sections with filename globs matching the current filename.  If multiple <code>.editorconfig</code> files have matching globs, the rules from the closer <code>.editorconfig</code> file takes precedence.</p>
 
-        <p>In the above example, editors should use 4 spaces for indenting when editing the Python files in the project and hard tabs for indenting in JavaScript files.</p>
+        <p>In the above example, editors should use 4 spaces for indenting when editing the Python files in the project and hard tabs for indenting in JavaScript files.  The hard tabs should have a column width of 2 (appearing the same width as 2 characters).</p>
         
         <p>Check out <a href="https://github.com/editorconfig/editorconfig.github.com/blob/master/.editorconfig">the EditorConfig file for this website</a> which defines 2 spaces for indentation of HTML and CSS files.</p>
 
@@ -91,7 +92,8 @@ indent_style = tab
 
         <ul class="property-definitions">
           <li><dfn>indent_style</dfn>: can be set to <q>tab</q> or <q>space</q> to use hard tabs or spaces respectively.</li>
-          <li><dfn>tab_width</dfn>: if <code>indent_style</code> is <q>space</q>, this should be a whole number defining the number of spaces used for each indentation level.</li>
+          <li><dfn>indent_size</dfn>: a whole number defining the number of columns used for each indentation level.</li>
+          <li><dfn>tab_width</dfn>: a whole number defining the number of columns used to represent a tab character.</li>
         </ul>
 
       </section>
