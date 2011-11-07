@@ -30,7 +30,7 @@
 
         <h2 id="what-is-editorconfig">What is EditorConfig?</h2>
 
-        <p>EditorConfig is an initiative for solving the <q>my indentation style is different than yours</q> problem common amongst open source projects.  An EditorConfig file is used to define the recommended indentation styles for a group of files.  The goal of this project is to finalize the EditorConfig file format and create plugins to add EditorConfig support to popular text editors and <abbr title="integrated development environment">IDEs</abbr>.</p>
+        <p>EditorConfig is an initiative for solving the <q>my coding style is different than yours</q> problem common amongst multi-developer teams.  An EditorConfig file is used to define recommended coding styles for groups of files.  The goal of this project is to finalize the EditorConfig file format and create plugins to add EditorConfig support to popular text editors and <abbr title="integrated development environment">IDEs</abbr>.</p>
 
         <h4 style="margin-bottom: 0;">Page Contents</h4>
         <ol class="nav">
@@ -48,7 +48,7 @@
         <p>The EditorConfig file format is not yet finalized.  This is the definition for the current editorconfig version pending finalization (v0.3).</p>
 
         <h3 id="example-file">Example file</h3>
-        <p>The below file specifies that all files with a <code>py</code> file extension (Python files) use 4 spaces for indentation and all files with a <code>js</code> file extension (JavaScript files) use tabs for indentation with 2 columns used to for tabs.</p>
+        <p>The below file specifies that all files with a <code>py</code> file extension (Python files) use 4 spaces for indentation and all files with a <code>js</code> file extension (JavaScript files) use hard tabs for indentation with a column width of 2 (appearing the same width as 2 characters).</p>
 
         <pre>
 [*.py]
@@ -62,19 +62,16 @@ tab_width = 2
 
         <h3 id="file-location">Where are these files stored?</h3>
 
-        <p>When a file is opened in a text editor with an EditorConfig plugin, a search is performed in the current directory and all parent directories for a file called <code>.editorconfig</code>.  All found <code>.editorconfig</code> files are searched for sections with filename globs matching the current filename.  If multiple <code>.editorconfig</code> files have matching globs, the rules from the closer <code>.editorconfig</code> file takes precedence.</p>
-
-        <p>In the above example, editors should use 4 spaces for indenting when editing the Python files in the project and hard tabs for indenting in JavaScript files.  The hard tabs should have a column width of 2 (appearing the same width as 2 characters).</p>
+        <p>When a file is opened in a text editor with an EditorConfig plugin, a search is performed in the current directory and all parent directories for a file called <code>.editorconfig</code>.  All found <code>.editorconfig</code> files are searched for sections with section names matching the current filename.  If multiple <code>.editorconfig</code> files have matching sections, the rules from the closer <code>.editorconfig</code> file are read first.  Files are read top to bottom and the most recent rules found take precedence.</p>
         
-        <p>Check out <a href="https://github.com/editorconfig/editorconfig.github.com/blob/master/.editorconfig">the EditorConfig file for this website</a> which defines 2 spaces for indentation of HTML and CSS files.</p>
 
         <h3 id="file-format-details">Details of the file format</h3>
 
-        <p>EditorConfig files use an INI file format in which sections names are <a href="http://en.wikipedia.org/wiki/Glob_(programming)">globs</a> matching filenames in the format accepted by the <a href="http://www.freebsd.org/cgi/man.cgi?query=fnmatch">fnmatch</a> C library.  Comments can be added to these files by prepending a semicolon (<code>;</code>) to the beginning of a line.  Comments and blank lines are ignored when parsing these files.</p>
+        <p>EditorConfig files use an INI file format in which section names are <a href="http://en.wikipedia.org/wiki/Glob_(programming)">globs</a> matching filenames in a format accepted by the <a href="http://www.freebsd.org/cgi/man.cgi?query=fnmatch">fnmatch</a> C library.  Comments can be added to these files by prepending a semicolon (<code>;</code>) to the beginning of a line.  Comments and blank lines are ignored when parsing these files.</p>
 
         <h4 class="wildcards">Wildcard patterns</h4>
 
-        <p>Section names in EditorConfig files are file globs.  These file globs support pattern matching through Unix shell-style wildcards.  The following special characters are used in these shell-style wildcards:</p>
+        <p>Section names in EditorConfig files are filename globs that support pattern matching through Unix shell-style wildcards.  These filename globs recognize the following as special characters for wildcard matching:</p>
 
         <table>
           <tr><td><code>*</code></td><td>Matches any string of characters, except for path separators (<code>/</code> character)</td></tr>
@@ -86,14 +83,15 @@ tab_width = 2
         <p>The backslash character (<code>\</code>) can be used to escape a character so it is not interpreted as a special character.</p>
 
         <h4 id="supported-properties">Supported properties</h4>
-        <p>EditorConfig file sections contain <dfn>properties</dfn>, which are name-value pairs separated by an equal sign (<code>=</code>).  Property names can contain letters, numbers, and underscores.  EditorConfig plugins will ignore any unrecognized property names and any properties with invalid values.</p>
+        <p>EditorConfig file sections contain properties, which are name-value pairs separated by an equal sign (<code>=</code>).  EditorConfig plugins will ignore unrecognized property names and properties with invalid values.</p>
         
         <p>Here is the list of all property names understood by EditorConfig and all valid values for these properties:</p>
 
         <ul class="property-definitions">
-          <li><dfn>indent_style</dfn>: can be set to <q>tab</q> or <q>space</q> to use hard tabs or spaces respectively.</li>
+          <li><dfn>indent_style</dfn>: set to <q>tab</q> or <q>space</q> to use hard tabs or spaces respectively.</li>
           <li><dfn>indent_size</dfn>: a whole number defining the number of columns used for each indentation level.</li>
           <li><dfn>tab_width</dfn>: a whole number defining the number of columns used to represent a tab character.</li>
+          <li><dfn>end_of_line</dfn>: can be set to <q>LF</q>, <q>CF</q>, or <q>CRLF</q>.</li>
         </ul>
 
       </section>
@@ -102,7 +100,7 @@ tab_width = 2
 
       <h2 id="supported-editors">Supported text editors</h2>
 
-      <p>The EditorConfig file format is not finalized yet, but there's a vim plugin to demonstrate and test the format so far.  You can <a href="https://github.com/editorconfig/editorconfig-vim">find the editorconfig vim plugin here</a>.  Eventually the file format will be finalized and plugins will be written for other popular text editors.</p>
+      <p>The EditorConfig file format is not finalized yet, but <a href="https://github.com/editorconfig/editorconfig-vim">there's a vim plugin</a> to demonstrate and test the format so far and <a href="https://github.com/editorconfig/editorconfig-emacs">an emacs plugin</a> in the works.  Eventually the file format will be finalized and plugins will be written for other popular text editors.</p>
 
       </section>
 
@@ -116,7 +114,7 @@ tab_width = 2
 
       <h3 id="create-a-plugin">Create a plugin</h3>
 
-      <p>EditorConfig plugins can be developed by using the editorconfig core code found in the <a href="https://github.com/editorconfig/editorconfig">main editorconfig repository</a>.  The editorconfig core is a C program that accepts as input the file being edited, finds and parses applicable <code>.editorconfig</code> files, and passes back the options that should be used.</p>
+      <p>EditorConfig plugins can be developed by using the EditorConfig core code found in the <a href="https://github.com/editorconfig/editorconfig">EditorConfig core repository</a>.  The EditorConfig core is a C program that accepts as input the file being edited, finds and parses applicable <code>.editorconfig</code> files, and passes back the properties that should be used.</p>
       <p>If you are planning on creating a new plugin, use the <a href="http://groups.google.com/group/editorconfig">mailing list</a> to let us know so we can help out and link to your plugin once it's online.  If you plan on using the EditorConfig core as a C library, the <a href="core-docs">documentation</a> may be helpful.</p>
 
       </section>
