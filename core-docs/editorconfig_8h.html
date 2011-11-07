@@ -99,10 +99,12 @@ Data Structures</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A structure that contains the parsing result.  <a href="structeditorconfig__parsing__out.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editorconfig_8h.html#a7c6b3a819f21992b15b5e471a2d54a58">editorconfig_parse</a> (const char *full_filename, <a class="el" href="structeditorconfig__parsing__out.html">editorconfig_parsing_out</a> *out, char **err_file)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse editorconfig files corresponding to the file path given by full_filename, and put the result to "out".  <a href="#a7c6b3a819f21992b15b5e471a2d54a58"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editorconfig_8h.html#a72fd5b768062d0817954265fd13bbd2e">editorconfig_parsing_out_clear</a> (<a class="el" href="structeditorconfig__parsing__out.html">editorconfig_parsing_out</a> *epo)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the <a class="el" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a> structure after a success call of editorconfig_parse.  <a href="#a72fd5b768062d0817954265fd13bbd2e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editorconfig_8h.html#aecd0199542ec4596763ed86ead272b45">editorconfig_parse</a> (const char *full_filename, struct <a class="el" href="structeditorconfig__parsing__out.html">editorconfig_parsing_out</a> *out, char **err_file)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse editorconfig files corresponding to the file path given by full_filename, and put the result to "out".  <a href="#aecd0199542ec4596763ed86ead272b45"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editorconfig_8h.html#a8e8913e26ac049c6bda7fe062820d015">editorconfig_is_standard_conformed</a> (const struct <a class="el" href="structeditorconfig__parsing__out.html">editorconfig_parsing_out</a> *epo)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the parsing result of editorconfig files conforms to the standard.  <a href="#a8e8913e26ac049c6bda7fe062820d015"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editorconfig_8h.html#a821c41a82da14b8a9876778a68d4f17d">editorconfig_parsing_out_clear</a> (struct <a class="el" href="structeditorconfig__parsing__out.html">editorconfig_parsing_out</a> *epo)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the <a class="el" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a> structure after a success call of editorconfig_parse.  <a href="#a821c41a82da14b8a9876778a68d4f17d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editorconfig_8h.html#a388429db79c58c67f166a7daa026e695">editorconfig_get_version</a> (int *major, int *minor, int *subminor)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the version number of EditorConfig.  <a href="#a388429db79c58c67f166a7daa026e695"></a><br/></td></tr>
 </table>
@@ -155,7 +157,39 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7c6b3a819f21992b15b5e471a2d54a58"></a><!-- doxytag: member="editorconfig.h::editorconfig_parse" ref="a7c6b3a819f21992b15b5e471a2d54a58" args="(const char *full_filename, editorconfig_parsing_out *out, char **err_file)" -->
+<a class="anchor" id="a8e8913e26ac049c6bda7fe062820d015"></a><!-- doxytag: member="editorconfig.h::editorconfig_is_standard_conformed" ref="a8e8913e26ac049c6bda7fe062820d015" args="(const struct editorconfig_parsing_out *epo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* editorconfig_is_standard_conformed </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structeditorconfig__parsing__out.html">editorconfig_parsing_out</a> *&#160;</td>
+          <td class="paramname"><em>epo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check whether the parsing result of editorconfig files conforms to the standard. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">epo</td><td>The <a class="el" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a> structure containing the parsing result to be checked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>Return values:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>The parsing result of editorconfig files conforms to the standard.</td></tr>
+    <tr><td class="paramname">non-NULL</td><td>The parsing result of editorconfig files does not conform to the standard. The return value is a pointer to the error message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aecd0199542ec4596763ed86ead272b45"></a><!-- doxytag: member="editorconfig.h::editorconfig_parse" ref="aecd0199542ec4596763ed86ead272b45" args="(const char *full_filename, struct editorconfig_parsing_out *out, char **err_file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -168,7 +202,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structeditorconfig__parsing__out.html">editorconfig_parsing_out</a> *&#160;</td>
+          <td class="paramtype">struct <a class="el" href="structeditorconfig__parsing__out.html">editorconfig_parsing_out</a> *&#160;</td>
           <td class="paramname"><em>out</em>, </td>
         </tr>
         <tr>
@@ -208,14 +242,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a72fd5b768062d0817954265fd13bbd2e"></a><!-- doxytag: member="editorconfig.h::editorconfig_parsing_out_clear" ref="a72fd5b768062d0817954265fd13bbd2e" args="(editorconfig_parsing_out *epo)" -->
+<a class="anchor" id="a821c41a82da14b8a9876778a68d4f17d"></a><!-- doxytag: member="editorconfig.h::editorconfig_parsing_out_clear" ref="a821c41a82da14b8a9876778a68d4f17d" args="(struct editorconfig_parsing_out *epo)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int editorconfig_parsing_out_clear </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structeditorconfig__parsing__out.html">editorconfig_parsing_out</a> *&#160;</td>
+          <td class="paramtype">struct <a class="el" href="structeditorconfig__parsing__out.html">editorconfig_parsing_out</a> *&#160;</td>
           <td class="paramname"><em>epo</em></td><td>)</td>
           <td></td>
         </tr>
@@ -247,7 +281,7 @@ Functions</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="editorconfig_8h.html">editorconfig.h</a>      </li>
-      <li class="footer">Generated on Fri Nov 4 2011 11:25:42 for EditorConfig by&#160;
+      <li class="footer">Generated on Mon Nov 7 2011 07:38:53 for EditorConfig by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

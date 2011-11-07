@@ -82,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <a href="editorconfig_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
-<a name="l00002"></a>00002 <span class="comment"> * Copyright (c) 2011 Trey Hunner and Hong Xu</span>
+<a name="l00002"></a>00002 <span class="comment"> * Copyright (c) 2011 EditorConfig Team</span>
 <a name="l00003"></a>00003 <span class="comment"> * All rights reserved.</span>
 <a name="l00004"></a>00004 <span class="comment"> * </span>
 <a name="l00005"></a>00005 <span class="comment"> * Redistribution and use in source and binary forms, with or without</span>
@@ -110,51 +110,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00034"></a>00034 <span class="preprocessor">#ifndef __EDITORCONFIG_EDITORCONFIG_H__</span>
 <a name="l00035"></a>00035 <span class="preprocessor"></span><span class="preprocessor">#define __EDITORCONFIG_EDITORCONFIG_H__</span>
 <a name="l00036"></a>00036 <span class="preprocessor"></span>
-<a name="l00041"></a><a class="code" href="structeditorconfig__name__value.html">00041</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
-<a name="l00042"></a>00042 {
-<a name="l00044"></a><a class="code" href="structeditorconfig__name__value.html#a730de7d8f8839893b8ee6eee0f277fc3">00044</a>     <span class="keywordtype">char</span>*       <a class="code" href="structeditorconfig__name__value.html#a730de7d8f8839893b8ee6eee0f277fc3">name</a>;
-<a name="l00046"></a><a class="code" href="structeditorconfig__name__value.html#a301bc8e2416db2e5b01d09230e825c4a">00046</a>     <span class="keywordtype">char</span>*       <a class="code" href="structeditorconfig__name__value.html#a301bc8e2416db2e5b01d09230e825c4a">value</a>;
-<a name="l00047"></a>00047 } <a class="code" href="structeditorconfig__name__value.html" title="A structure containing a name and its corresponding value.">editorconfig_name_value</a>;
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 
-<a name="l00054"></a><a class="code" href="structeditorconfig__parsing__out.html">00054</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
-<a name="l00055"></a>00055 {
-<a name="l00058"></a><a class="code" href="structeditorconfig__parsing__out.html#a8e008a81b15a8b73059077f6ea198ae1">00058</a>     <a class="code" href="structeditorconfig__name__value.html" title="A structure containing a name and its corresponding value.">editorconfig_name_value</a>*         <a class="code" href="structeditorconfig__parsing__out.html#a8e008a81b15a8b73059077f6ea198ae1">name_values</a>;
-<a name="l00061"></a><a class="code" href="structeditorconfig__parsing__out.html#adb8b13b8dda16f8df96e03458dc2abcd">00061</a>     <span class="keywordtype">int</span>                              <a class="code" href="structeditorconfig__parsing__out.html#adb8b13b8dda16f8df96e03458dc2abcd">count</a>;
-<a name="l00062"></a>00062 } <a class="code" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a>;
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="comment">/* When included from a user program, EDITORCONFIG_EXPORT may not be defined,</span>
-<a name="l00065"></a>00065 <span class="comment"> * and we define it here*/</span>
-<a name="l00066"></a>00066 <span class="preprocessor">#ifndef EDITORCONFIG_EXPORT</span>
-<a name="l00067"></a>00067 <span class="preprocessor"></span><span class="preprocessor"># define EDITORCONFIG_EXPORT</span>
-<a name="l00068"></a>00068 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00069"></a>00069 <span class="preprocessor"></span>
-<a name="l00070"></a>00070 <span class="preprocessor">#ifdef __cplusplus</span>
-<a name="l00071"></a>00071 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {
-<a name="l00072"></a>00072 <span class="preprocessor">#endif</span>
-<a name="l00073"></a>00073 <span class="preprocessor"></span>
+<a name="l00037"></a>00037 <span class="comment">/* When included from a user program, EDITORCONFIG_EXPORT may not be defined,</span>
+<a name="l00038"></a>00038 <span class="comment"> * and we define it here*/</span>
+<a name="l00039"></a>00039 <span class="preprocessor">#ifndef EDITORCONFIG_EXPORT</span>
+<a name="l00040"></a>00040 <span class="preprocessor"></span><span class="preprocessor"># define EDITORCONFIG_EXPORT</span>
+<a name="l00041"></a>00041 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span>
+<a name="l00043"></a>00043 <span class="preprocessor">#ifdef __cplusplus</span>
+<a name="l00044"></a>00044 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {
+<a name="l00045"></a>00045 <span class="preprocessor">#endif</span>
+<a name="l00046"></a>00046 <span class="preprocessor"></span>
+<a name="l00051"></a><a class="code" href="structeditorconfig__name__value.html">00051</a> <span class="keyword">struct </span><a class="code" href="structeditorconfig__name__value.html" title="A structure containing a name and its corresponding value.">editorconfig_name_value</a>
+<a name="l00052"></a>00052 {
+<a name="l00054"></a><a class="code" href="structeditorconfig__name__value.html#a730de7d8f8839893b8ee6eee0f277fc3">00054</a>     <span class="keywordtype">char</span>*       <a class="code" href="structeditorconfig__name__value.html#a730de7d8f8839893b8ee6eee0f277fc3">name</a>;
+<a name="l00056"></a><a class="code" href="structeditorconfig__name__value.html#a301bc8e2416db2e5b01d09230e825c4a">00056</a>     <span class="keywordtype">char</span>*       <a class="code" href="structeditorconfig__name__value.html#a301bc8e2416db2e5b01d09230e825c4a">value</a>;
+<a name="l00057"></a>00057 };
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 
+<a name="l00064"></a><a class="code" href="structeditorconfig__parsing__out.html">00064</a> <span class="keyword">struct </span><a class="code" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a>
+<a name="l00065"></a>00065 {
+<a name="l00068"></a><a class="code" href="structeditorconfig__parsing__out.html#af13efa4a0d899ca91dd90cb45459f2f0">00068</a>     <span class="keyword">struct </span><a class="code" href="structeditorconfig__name__value.html" title="A structure containing a name and its corresponding value.">editorconfig_name_value</a>*  <a class="code" href="structeditorconfig__parsing__out.html#af13efa4a0d899ca91dd90cb45459f2f0">name_values</a>;
+<a name="l00071"></a><a class="code" href="structeditorconfig__parsing__out.html#adb8b13b8dda16f8df96e03458dc2abcd">00071</a>     <span class="keywordtype">int</span>                              <a class="code" href="structeditorconfig__parsing__out.html#adb8b13b8dda16f8df96e03458dc2abcd">count</a>;
+<a name="l00072"></a>00072 };
+<a name="l00073"></a>00073 
 <a name="l00100"></a>00100 EDITORCONFIG_EXPORT
-<a name="l00101"></a>00101 <span class="keywordtype">int</span> <a class="code" href="editorconfig_8h.html#a7c6b3a819f21992b15b5e471a2d54a58" title="Parse editorconfig files corresponding to the file path given by full_filename, and put the result to...">editorconfig_parse</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* full_filename, <a class="code" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a>* out,
-<a name="l00102"></a>00102         <span class="keywordtype">char</span>** err_file);
+<a name="l00101"></a>00101 <span class="keywordtype">int</span> <a class="code" href="editorconfig_8h.html#aecd0199542ec4596763ed86ead272b45" title="Parse editorconfig files corresponding to the file path given by full_filename, and put the result to...">editorconfig_parse</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* full_filename,
+<a name="l00102"></a>00102         <span class="keyword">struct</span> <a class="code" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a>* out, <span class="keywordtype">char</span>** err_file);
 <a name="l00103"></a>00103 
-<a name="l00118"></a>00118 EDITORCONFIG_EXPORT
-<a name="l00119"></a>00119 <span class="keywordtype">int</span> <a class="code" href="editorconfig_8h.html#a72fd5b768062d0817954265fd13bbd2e" title="Clear the editorconfig_parsing_out structure after a success call of editorconfig_parse.">editorconfig_parsing_out_clear</a>(<a class="code" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a>* epo);
+<a name="l00117"></a>00117 EDITORCONFIG_EXPORT
+<a name="l00118"></a>00118 <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="editorconfig_8h.html#a8e8913e26ac049c6bda7fe062820d015" title="Check whether the parsing result of editorconfig files conforms to the standard.">editorconfig_is_standard_conformed</a>(
+<a name="l00119"></a>00119         <span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a>* epo);
 <a name="l00120"></a>00120 
-<a name="l00137"></a>00137 EDITORCONFIG_EXPORT
-<a name="l00138"></a>00138 <span class="keywordtype">void</span> <a class="code" href="editorconfig_8h.html#a388429db79c58c67f166a7daa026e695" title="Get the version number of EditorConfig.">editorconfig_get_version</a>(<span class="keywordtype">int</span>* major, <span class="keywordtype">int</span>* minor, <span class="keywordtype">int</span>* subminor);
-<a name="l00139"></a>00139 
-<a name="l00140"></a>00140 <span class="preprocessor">#ifdef __cplusplus</span>
-<a name="l00141"></a>00141 <span class="preprocessor"></span>}
-<a name="l00142"></a>00142 <span class="preprocessor">#endif</span>
-<a name="l00143"></a>00143 <span class="preprocessor"></span>
-<a name="l00144"></a>00144 <span class="preprocessor">#endif </span><span class="comment">/* !__EDITORCONFIG_EDITORCONFIG_H__ */</span>
-<a name="l00145"></a>00145 
+<a name="l00135"></a>00135 EDITORCONFIG_EXPORT
+<a name="l00136"></a>00136 <span class="keywordtype">int</span> <a class="code" href="editorconfig_8h.html#a821c41a82da14b8a9876778a68d4f17d" title="Clear the editorconfig_parsing_out structure after a success call of editorconfig_parse.">editorconfig_parsing_out_clear</a>(<span class="keyword">struct</span> <a class="code" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a>* epo);
+<a name="l00137"></a>00137 
+<a name="l00154"></a>00154 EDITORCONFIG_EXPORT
+<a name="l00155"></a>00155 <span class="keywordtype">void</span> <a class="code" href="editorconfig_8h.html#a388429db79c58c67f166a7daa026e695" title="Get the version number of EditorConfig.">editorconfig_get_version</a>(<span class="keywordtype">int</span>* major, <span class="keywordtype">int</span>* minor, <span class="keywordtype">int</span>* subminor);
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157 <span class="preprocessor">#ifdef __cplusplus</span>
+<a name="l00158"></a>00158 <span class="preprocessor"></span>}
+<a name="l00159"></a>00159 <span class="preprocessor">#endif</span>
+<a name="l00160"></a>00160 <span class="preprocessor"></span>
+<a name="l00161"></a>00161 <span class="preprocessor">#endif </span><span class="comment">/* !__EDITORCONFIG_EDITORCONFIG_H__ */</span>
+<a name="l00162"></a>00162 
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="editorconfig_8h.html">editorconfig.h</a>      </li>
-      <li class="footer">Generated on Fri Nov 4 2011 11:25:42 for EditorConfig by&#160;
+      <li class="footer">Generated on Mon Nov 7 2011 07:38:53 for EditorConfig by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
