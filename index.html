@@ -83,7 +83,7 @@ tab_width = 2
         <p>The backslash character (<code>\</code>) can be used to escape a character so it is not interpreted as a special character.</p>
 
         <h4 id="supported-properties">Supported properties</h4>
-        <p>EditorConfig file sections contain properties, which are name-value pairs separated by an equal sign (<code>=</code>).  EditorConfig plugins will ignore unrecognized property names and properties with invalid values.  Property names are case insensitive and all property names are lowercased when processing.</p>
+        <p>EditorConfig file sections contain properties, which are name-value pairs separated by an equal sign (<code>=</code>).  EditorConfig plugins will ignore unrecognized property names and properties with invalid values.</p>
 
         <p>Here is the list of all property names understood by EditorConfig and all valid values for these properties:</p>
 
@@ -93,6 +93,8 @@ tab_width = 2
           <li><dfn>tab_width</dfn>: a whole number defining the number of columns used to represent a tab character.</li>
           <li><dfn>end_of_line</dfn>: set to <q>LF</q>, <q>CR</q>, or <q>CRLF</q> to control how line breaks are represented.</li>
         </ul>
+
+        <p>Property names are case insensitive and all property names are lowercased when parsing.  The values of the <code>indent_style</code> and <code>end_of_line</code> properties are also case insensivite and are lowercased when parsing.</p>
 
       </section>
 
