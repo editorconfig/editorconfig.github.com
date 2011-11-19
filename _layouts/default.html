@@ -1,0 +1,40 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>EditorConfig{% if page.title %}: {{ page.title }}{% endif %}</title>
+  <meta name="author" content="EditorConfig Team">
+  {% if page.description %}
+  <meta name="description" content="Configuration file format for defining coding styles in shared projects.">
+  {% endif %}
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <h1>EditorConfig</h1>
+      {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
+    </header>
+    <div id="main" role="main">
+      {{ content }}
+    </div>
+
+    <footer>
+      The EditorConfig website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+    </footer>
+  </div>
+
+</body>
+</html>
