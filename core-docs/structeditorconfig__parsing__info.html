@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>EditorConfig: Data Fields - Variables</title>
+<title>EditorConfig: editorconfig_parsing_info Struct Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -75,13 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
-      <li class="current"><a href="functions.html"><span>Data&#160;Fields</span></a></li>
-    </ul>
-  </div>
-  <div id="navrow3" class="tabs2">
-    <ul class="tablist">
-      <li><a href="functions.html"><span>All</span></a></li>
-      <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
 </div>
@@ -95,34 +89,66 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('functions.html','');
+  initNavTree('structeditorconfig__parsing__info.html','');
 </script>
 <div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
+  <div class="headertitle">
+<div class="title">editorconfig_parsing_info Struct Reference</div>  </div>
+</div>
 <div class="contents">
-&#160;<ul>
-<li>conf_file_name
-: <a class="el" href="structeditorconfig__parsing__info.html#aa0679a27d4d1ffe67e5ae119055f707b">editorconfig_parsing_info</a>
-</li>
-<li>count
-: <a class="el" href="structeditorconfig__parsing__out.html#adb8b13b8dda16f8df96e03458dc2abcd">editorconfig_parsing_out</a>
-</li>
-<li>err_file
-: <a class="el" href="structeditorconfig__parsing__info.html#a636ee1ce36a4b905098b2a2d79dce247">editorconfig_parsing_info</a>
-</li>
-<li>name
-: <a class="el" href="structeditorconfig__name__value.html#a730de7d8f8839893b8ee6eee0f277fc3">editorconfig_name_value</a>
-</li>
-<li>name_values
-: <a class="el" href="structeditorconfig__parsing__out.html#af13efa4a0d899ca91dd90cb45459f2f0">editorconfig_parsing_out</a>
-</li>
-<li>value
-: <a class="el" href="structeditorconfig__name__value.html#a301bc8e2416db2e5b01d09230e825c4a">editorconfig_name_value</a>
-</li>
+<!-- doxytag: class="editorconfig_parsing_info" -->
+<p>A structure that contains the parsing information which should be provided before parsing.  
+ <a href="structeditorconfig__parsing__info.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="editorconfig_8h_source.html">editorconfig/editorconfig.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditorconfig__parsing__info.html#aa0679a27d4d1ffe67e5ae119055f707b">conf_file_name</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeditorconfig__parsing__info.html#a636ee1ce36a4b905098b2a2d79dce247">err_file</a></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>A structure that contains the parsing information which should be provided before parsing. </p>
+</div><hr/><h2>Field Documentation</h2>
+<a class="anchor" id="aa0679a27d4d1ffe67e5ae119055f707b"></a><!-- doxytag: member="editorconfig_parsing_info::conf_file_name" ref="aa0679a27d4d1ffe67e5ae119055f707b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* <a class="el" href="structeditorconfig__parsing__info.html#aa0679a27d4d1ffe67e5ae119055f707b">editorconfig_parsing_info::conf_file_name</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The file name of EditorConfig conf file. If this pointer is set to NULL, the file name is set to ".editorconfig" by default. </p>
+
+</div>
+</div>
+<a class="anchor" id="a636ee1ce36a4b905098b2a2d79dce247"></a><!-- doxytag: member="editorconfig_parsing_info::err_file" ref="a636ee1ce36a4b905098b2a2d79dce247" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* <a class="el" href="structeditorconfig__parsing__info.html#a636ee1ce36a4b905098b2a2d79dce247">editorconfig_parsing_info::err_file</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>When a parsing error occured, this will point to a file that caused the parsing error. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="editorconfig_8h_source.html">editorconfig.h</a></li>
 </ul>
 </div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
+      <li class="navelem"><a class="el" href="structeditorconfig__parsing__info.html">editorconfig_parsing_info</a>      </li>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"

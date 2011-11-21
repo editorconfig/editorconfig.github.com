@@ -3,6 +3,7 @@ var NAVTREE =
   [ "EditorConfig", "index.html", [
     [ "Data Structures", "annotated.html", [
       [ "editorconfig_name_value", "structeditorconfig__name__value.html", null ],
+      [ "editorconfig_parsing_info", "structeditorconfig__parsing__info.html", null ],
       [ "editorconfig_parsing_out", "structeditorconfig__parsing__out.html", null ]
     ] ],
     [ "Data Structure Index", "classes.html", null ],
