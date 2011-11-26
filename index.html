@@ -50,6 +50,8 @@ indent_size = 2
 
   <p>Filename globs containing path separators (<code>/</code>) match filepaths as expected.  For example <code>src/*.c</code> matches all <code>*.c</code> files directly below <code>src</code> directories.  Filename globs starting with a path separator match the path starting from the <code>.editorconfig</code> file only.  For example <code>/*.c</code> matches only C files in the directory of the found <code>.editorconfig</code> file.</p>
 
+  <p>EditorConfig files should be UTF-8 encoded.</p>
+
   <h4 class="wildcards">Wildcard patterns</h4>
 
   <p>Section names in EditorConfig files are filename globs that support pattern matching through Unix shell-style wildcards.  These filename globs recognize the following as special characters for wildcard matching:</p>
