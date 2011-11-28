@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>EditorConfig: Data Fields - Variables</title>
+<title>EditorConfig: EditorConfig Command</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -51,8 +51,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li class="current"><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -72,19 +72,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
-      <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
-      <li class="current"><a href="functions.html"><span>Data&#160;Fields</span></a></li>
-    </ul>
-  </div>
-  <div id="navrow3" class="tabs2">
-    <ul class="tablist">
-      <li><a href="functions.html"><span>All</span></a></li>
-      <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
-    </ul>
-  </div>
 </div>
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -96,31 +83,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('functions.html','');
+  initNavTree('editorconfig.html','');
 </script>
 <div id="doc-content">
-<div class="contents">
-&#160;<ul>
-<li>conf_file_name
-: <a class="el" href="structeditorconfig__parsing__info.html#aa0679a27d4d1ffe67e5ae119055f707b">editorconfig_parsing_info</a>
-</li>
-<li>count
-: <a class="el" href="structeditorconfig__parsing__out.html#adb8b13b8dda16f8df96e03458dc2abcd">editorconfig_parsing_out</a>
-</li>
-<li>err_file
-: <a class="el" href="structeditorconfig__parsing__info.html#a636ee1ce36a4b905098b2a2d79dce247">editorconfig_parsing_info</a>
-</li>
-<li>name
-: <a class="el" href="structeditorconfig__name__value.html#a730de7d8f8839893b8ee6eee0f277fc3">editorconfig_name_value</a>
-</li>
-<li>name_values
-: <a class="el" href="structeditorconfig__parsing__out.html#af13efa4a0d899ca91dd90cb45459f2f0">editorconfig_parsing_out</a>
-</li>
-<li>value
-: <a class="el" href="structeditorconfig__name__value.html#a301bc8e2416db2e5b01d09230e825c4a">editorconfig_name_value</a>
-</li>
-</ul>
+<div class="header">
+  <div class="headertitle">
+<div class="title">EditorConfig Command </div>  </div>
 </div>
+<div class="contents">
+<div class="textblock"><h2><a class="anchor" id="usage"></a>
+Usage of the `editorconfig` command line tool</h2>
+<p>Usage: editorconfig <em>[OPTIONS]</em> FILENAME</p>
+<p><em>-f</em> Sepcify a conf file name other than the default value ".editorconfig".</p>
+<p><em>-c</em> Check standard conformation before print the parsing result.</p>
+<p><em>-h</em> OR <em>--help</em> Print this help message.</p>
+<p><em>--version</em> Display version information. </p>
+</div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>

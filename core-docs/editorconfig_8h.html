@@ -51,6 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -123,12 +124,13 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editorconfig_8h.html#a8e8913e26ac049c6bda7fe062820d015">editorconfig_is_standard_conformed</a> (const struct <a class="el" href="structeditorconfig__parsing__out.html">editorconfig_parsing_out</a> *epo)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the parsing result of editorconfig files conforms to the standard.  <a href="#a8e8913e26ac049c6bda7fe062820d015"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editorconfig_8h.html#a821c41a82da14b8a9876778a68d4f17d">editorconfig_parsing_out_clear</a> (struct <a class="el" href="structeditorconfig__parsing__out.html">editorconfig_parsing_out</a> *epo)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the <a class="el" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a> structure after a success call of editorconfig_parse.  <a href="#a821c41a82da14b8a9876778a68d4f17d"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the <a class="el" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a> structure after a success call of <a class="el" href="editorconfig_8h.html#a6b736b21a13a6e7f6f84aa2c898c2d6b" title="Parse editorconfig files corresponding to the file path given by full_filename, and put the result to...">editorconfig_parse()</a>.  <a href="#a821c41a82da14b8a9876778a68d4f17d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editorconfig_8h.html#a388429db79c58c67f166a7daa026e695">editorconfig_get_version</a> (int *major, int *minor, int *subminor)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the version number of EditorConfig.  <a href="#a388429db79c58c67f166a7daa026e695"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Header file of EditorConfig. </p>
+<dl class="author"><dt><b>Author:</b></dt><dd>EditorConfig Team </dd></dl>
 <dl class="version"><dt><b>Version:</b></dt><dd>0.2.0 </dd></dl>
 </div><hr/><h2>Function Documentation</h2>
 <a class="anchor" id="a388429db79c58c67f166a7daa026e695"></a><!-- doxytag: member="editorconfig.h::editorconfig_get_version" ref="a388429db79c58c67f166a7daa026e695" args="(int *major, int *minor, int *subminor)" -->
@@ -271,7 +273,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">full_filename</td><td>The full path of a file that is edited by the editor for which the parsing result is.</td></tr>
     <tr><td class="paramname">out</td><td>The parsing result will be filled in out, which is a <a class="el" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a> structure. This structure needs to be cleared by editorconfig_parsing_out_clear if this function succeeds.</td></tr>
-    <tr><td class="paramname">info</td><td>The parsing information to be used and returned from this function. Could be NULL if you want to use the default value and you do not want to get any information back; if you want to use the default value and you also want the output information, you could use editorconfig_init_parsing_info to initialize an <a class="el" href="structeditorconfig__parsing__info.html" title="A structure that contains the parsing information which should be provided before parsing...">editorconfig_parsing_info</a> structure and pass the address as this parameter.</td></tr>
+    <tr><td class="paramname">info</td><td>The parsing information to be used and returned from this function. Could be NULL if you want to use the default value and you do not want to get any information back; if you want to use the default value and you also want the output information, you could use <a class="el" href="editorconfig_8h.html#a2c2975fa1659e3633576686d5ab8db17" title="Initialize an editorconfig_parsing_info structure with default values.">editorconfig_init_parsing_info()</a> to initialize an <a class="el" href="structeditorconfig__parsing__info.html" title="A structure that contains the parsing information which should be provided before parsing...">editorconfig_parsing_info</a> structure and pass the address as this parameter.</td></tr>
   </table>
   </dd>
 </dl>
@@ -302,7 +304,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Clear the <a class="el" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a> structure after a success call of editorconfig_parse. </p>
+<p>Clear the <a class="el" href="structeditorconfig__parsing__out.html" title="A structure that contains the parsing result.">editorconfig_parsing_out</a> structure after a success call of <a class="el" href="editorconfig_8h.html#a6b736b21a13a6e7f6f84aa2c898c2d6b" title="Parse editorconfig files corresponding to the file path given by full_filename, and put the result to...">editorconfig_parse()</a>. </p>
 <p>An example is available at src/bin/main.c in editorconfig source code.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -341,7 +343,7 @@ Functions</h2></td></tr>
 </div>
 
 
-    <li class="footer">Generated on Mon Nov 21 2011 07:30:46 for EditorConfig by
+    <li class="footer">Generated on Sun Nov 27 2011 17:07:45 for EditorConfig by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>
