@@ -28,6 +28,8 @@ description: file format for defining coding styles in shared projects.
   <p>The below file specifies that all files with a <code>py</code> file extension (Python files) use 4 spaces for indentation and all files with a <code>js</code> file extension (JavaScript files) use hard tabs for indentation with a column width of 2 (appearing the same width as 2 characters).</p>
 
   <pre>
+root = true
+
 [*.py]
 indent_style = space
 indent_size = 4
@@ -35,11 +37,11 @@ indent_size = 4
 [*.js]
 indent_style = tab
 indent_size = 2
-  </pre>
+</pre>
 
   <h3 id="file-location">Where are these files stored?</h3>
 
-  <p>When a file is opened in a text editor with an EditorConfig plugin, a search is performed in the current directory and all parent directories for a file called <code>.editorconfig</code>.  All found <code>.editorconfig</code> files are searched for sections with section names matching the current filename.</p>
+  <p>When a file is opened in a text editor with an EditorConfig plugin, a search is performed in the current directory and all parent directories for a file called <code>.editorconfig</code>.  All found EditorConfig files are searched for sections with section names matching the current filename.  The search will stop if an EditorConfig file is found with the <code>root</code> property set to <code>true</code> or when reaching the root filesystem directory.</p>
 
   <p>Files are read top to bottom and the most recent rules found take precedence.  If multiple <code>.editorconfig</code> files have matching sections, the rules from the closer <code>.editorconfig</code> file are read last, so properties in closer files take precedence.</p>
 
@@ -76,6 +78,7 @@ indent_size = 2
     <li><dfn>indent_size</dfn>: a whole number defining the number of columns used for each indentation level and the width of soft tabs (when supported).</li>
     <li><dfn>tab_width</dfn>: a whole number defining the number of columns used to represent a tab character.  This defaults to the value of <strong>indent_size</strong> and should not usually need to be specified.</li>
     <li><dfn>end_of_line</dfn>: set to <q>LF</q>, <q>CR</q>, or <q>CRLF</q> to control how line breaks are represented.</li>
+    <li><dfn>root</dfn>: special property that should be specified at the top of the file outside of any sections.  Set to <q>true</q> to stop <code>.editorconfig</code> files search on current file.</li>
   </ul>
 
   <p>Property names are case insensitive and all property names are lowercased when parsing.  The values of the <strong>indent_style</strong> and <strong>end_of_line</strong> properties are also case insensitive and are lowercased when parsing.</p>
