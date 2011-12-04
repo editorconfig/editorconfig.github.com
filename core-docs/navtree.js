@@ -5,15 +5,9 @@ var NAVTREE =
     [ "Related Pages", "pages.html", [
       [ "EditorConfig Command", "editorconfig.html", null ]
     ] ],
-    [ "Data Structures", "annotated.html", [
-      [ "editorconfig_name_value", "structeditorconfig__name__value.html", null ],
-      [ "editorconfig_parsing_info", "structeditorconfig__parsing__info.html", null ],
-      [ "editorconfig_parsing_out", "structeditorconfig__parsing__out.html", null ]
-    ] ],
-    [ "Data Structure Index", "classes.html", null ],
-    [ "Data Fields", "functions.html", null ],
     [ "File List", "files.html", [
-      [ "editorconfig.h", "editorconfig_8h.html", null ]
+      [ "editorconfig.h", "editorconfig_8h.html", null ],
+      [ "editorconfig_handle.h", "editorconfig__handle_8h.html", null ]
     ] ],
     [ "Globals", "globals.html", null ]
   ] ]
