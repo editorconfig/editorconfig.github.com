@@ -263,7 +263,7 @@ function SearchBox(name, resultsPath, inFrame, label)
         var node = child.firstChild;
         if (j==id)
         {
-          node.innerHTML='&#8226;';
+          node.innerHTML='&bull;';
         }
         else
         {
@@ -360,7 +360,7 @@ function SearchBox(name, resultsPath, inFrame, label)
        hasResultsPage = false;
     }
 
-    window.frames.MSearchResults.location = resultsPageWithSearch;  
+    window.frames.MSearchResults.location.href = resultsPageWithSearch;  
     var domPopupSearchResultsWindow = this.DOMPopupSearchResultsWindow();
 
     if (domPopupSearchResultsWindow.style.display!='block')
