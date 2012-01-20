@@ -17,15 +17,32 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script src="/js/scrollspy.js"></script>
 
 </head>
 
 <body>
+<div class="container">
 
-  <div id="container">
+  <div id="sidebar">
+    <nav>
+    <h4><a href="">Page Contents</a></h4>
+    <ol data-scrollspy="scrollspy">
+      <li><a href="#overview">What is EditorConfig?</a></li>
+      <li><a href="#example-file">Example File</a></li>
+      <li><a href="#file-location">File Location</a></li>
+      <li><a href="#file-format-details">File Format Details</a></li>
+      <li><a href="#supported-editors">Supported Text Editors</a></li>
+      <li><a href="#contributing">Contributing</a></li>
+    </ol>
+    </nav>
+  </div>
+
+  <div id="content">
+
     <header>
       <h1>EditorConfig</h1>
-      {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
     </header>
     <div id="main" role="main">
       {{ content }}
@@ -35,6 +52,7 @@
       The EditorConfig website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
     </footer>
   </div>
+</div>
 
 </body>
 </html>
