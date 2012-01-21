@@ -60,7 +60,7 @@ header { text-align: center; }
 }
 .container > #sidebar {
   position: fixed;
-  top: 3.85em;
+  top: 0;
   left: 1.25em;
   width: 11em;
 }
@@ -70,6 +70,8 @@ header { text-align: center; }
 
 section { padding-top: 10px; margin-top: -10px; }
 
+#sidebar .logo { float: left; display: block; height: 4.5em; padding: 0.5em 0; text-align: center; width: 100%; }
+#sidebar .logo img { max-height: 4.5em; }
 #sidebar nav { clear: both; }
 #sidebar nav > * { font-size: 0.8em; }
 #sidebar h4 { margin-bottom: 0; margin-left: 0.5em; }
@@ -82,6 +84,8 @@ section { padding-top: 10px; margin-top: -10px; }
 #sidebar li > a { color: #666; }
 #sidebar li.active { background-color: #eee; }
 #sidebar li.active > a { color: #000;  }
+
+h1.title { font-size: 2.25em; }
 
 /* 
  * Remove text-shadow in selection highlight: h5bp.com/i
