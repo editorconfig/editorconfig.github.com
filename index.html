@@ -15,19 +15,23 @@ description: file format for defining coding styles in shared projects.
 
   <h2>What's an EditorConfig file look like?</h2>
 
-  <p>The EditorConfig file format is not yet finalized.  This is the definition for the current editorconfig version pending finalization (v0.3).</p>
-
   <section id="example-file">
     <h3>Example file</h3>
-    <p>The below file specifies that all files with a <code>py</code> file extension (Python files) use 4 spaces for indentation and all files with a <code>js</code> file extension (JavaScript files) use hard tabs for indentation with a column width of 2 (appearing the same width as 2 characters).</p>
+    <p>Below is an example file that sets indentation styles for Python and JavaScript files and line ending styles for all files.  All characters appearing after a semicolon (<code>;</code>) are comments added for clarification.</p>
 
     <pre>
-root = true
+root = true ; top EditorConfig file for this project
 
+; Unix-style line endings
+[*]
+end_of_line = LF
+
+; 4 spaces for indentation
 [*.py]
 indent_style = space
 indent_size = 4
 
+; Tabs (2 columns wide) for indentation
 [*.js]
 indent_style = tab
 indent_size = 2
