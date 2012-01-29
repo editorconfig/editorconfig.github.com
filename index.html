@@ -20,18 +20,18 @@ description: file format for defining coding styles in shared projects.
     <p>Below is an example file that sets indentation styles for Python and JavaScript files and line ending styles for all files.  All characters appearing after a semicolon (<code>;</code>) are comments added for clarification.</p>
 
     <pre>
-root = true ; top EditorConfig file for this project
+root = true ; top-most EditorConfig file
 
-; Unix-style line endings
+; Unix-style newlines
 [*]
 end_of_line = LF
 
-; 4 spaces for indentation
+; 4 space indentation
 [*.py]
 indent_style = space
 indent_size = 4
 
-; Tabs (2 columns wide) for indentation
+; Tab (2 column) indentation
 [*.js]
 indent_style = tab
 indent_size = 2
