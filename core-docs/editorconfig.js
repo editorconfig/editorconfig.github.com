@@ -1,5 +1,4 @@
-var pages =
+var editorconfig =
 [
-    [ "EditorConfig Command", "editorconfig.html", null ],
     [ "EditorConfig File Format", "editorconfig-format.html", null ]
 ];

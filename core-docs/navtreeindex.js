@@ -4,6 +4,7 @@ var NAVTREEINDEX =
 "index.html":[0],
 "pages.html":[1],
 "editorconfig.html":[1,0],
+"editorconfig-format.html":[1,1],
 "files.html":[2,0],
 "editorconfig_8h.html":[2,0,0],
 "editorconfig__handle_8h.html":[2,0,1],

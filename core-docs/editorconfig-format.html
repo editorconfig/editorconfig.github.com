@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>EditorConfig: Related Pages</title>
+<title>EditorConfig: EditorConfig File Format</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -85,21 +85,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('pages.html','');
+  initNavTree('editorconfig-format.html','');
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">Related Pages</div>  </div>
+<div class="title">EditorConfig File Format </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all related documentation pages:</div><ul>
-<li><a class="el" href="editorconfig.html">EditorConfig Command</a>
-</li>
-<li><a class="el" href="editorconfig-format.html">EditorConfig File Format</a>
-</li>
+<div class="textblock"><h2><a class="anchor" id="format"></a>
+EditorConfig File Format</h2>
+<p>EditorConfig files use an INI file format in which section names are globs matching filenames in a format accepted by the fnmatch C library.</p>
+<p>Filename globs containing path separators (/) match filepaths in the same way as the filename globs used by .gitignore files. Backslashes (\) are not allowed as path separators.</p>
+<p>A semicolon character (;) starts a line comment that terminates at the end of the line. Line comments and blank lines are ignored when parsing.</p>
+<p>EditorConfig files should be UTF-8 encoded.</p>
+<h2><a class="anchor" id="file-location"></a>
+Filename and Location</h2>
+<p>When a filename is given to EditorConfig a search is performed in the directory of the given file and all parent directories for an EditorConfig file (named ".editorconfig" by default). All found EditorConfig files are searched for sections with section names matching the given filename. The search will stop if an EditorConfig file is found with the root property set to true or when reaching the root filesystem directory.</p>
+<p>Files are read top to bottom and the most recent rules found take precedence. If multiple EditorConfig files have matching sections, the rules from the closer EditorConfig file are read last, so properties in closer files take precedence. Where are these files stored?</p>
+<h2><a class="anchor" id="patterns"></a>
+Wildcard Patterns</h2>
+<p>Section names in EditorConfig files are filename globs that support pattern matching through Unix shell-style wildcards. These filename globs recognize the following as special characters for wildcard matching:</p>
+ 
+ <table>
+   <tr><td><code>*</code></td><td>Matches any string of characters, except path separators (<code>/</code>)</td></tr>
+   <tr><td><code>**</code></td><td>Matches any string of characters</td></tr>
+   <tr><td><code>?</code></td><td>Matches any single character</td></tr>
+   <tr><td><code>[seq]</code></td><td>Matches any single character in <i>seq</i></td></tr>
+   <tr><td><code>[!seq]</code></td><td>Matches any single character not in <i>seq</i></td></tr>
+ </table>
+  <p>The backslash character (\) can be used to escape a character so it is not interpreted as a special character.</p>
+<h2><a class="anchor" id="properties"></a>
+Supported Properties</h2>
+<p>EditorConfig file sections contain properties, which are name-value pairs separated by an equal sign (=). EditorConfig plugins will ignore unrecognized property names and properties with invalid values.</p>
+<p>Here is the list of all property names understood by EditorConfig and all valid values for these properties:</p>
+<ul>
+<li>
+<b>indent_style</b>: set to "tab" or "space" to use hard tabs or soft tabs respectively. </li>
+<li>
+<b>indent_size</b>: a whole number defining the number of columns used for each indentation level and the width of soft tabs (when supported). </li>
+<li>
+<b>tab_width</b>: a whole number defining the number of columns used to represent a tab character. This defaults to the value of <b>indent_size</b> and should not usually need to be specified. </li>
+<li>
+<b>end_of_line</b>: set to "LF", "CR", or "CRLF" to control how line breaks are represented. </li>
+<li>
+<b>root</b>: special property that should be specified at the top of the file outside of any sections. Set to "true" to stop <code>.editorconfig</code> files search on current file. </li>
 </ul>
-</div><!-- contents -->
+<p>Property names are case insensitive and all property names are lowercased when parsing. The values of the indent_style and end_of_line properties are also case insensitive and are lowercased when parsing. </p>
+</div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
