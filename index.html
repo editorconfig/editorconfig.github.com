@@ -41,43 +41,35 @@ indent_size = 2
   <section id="file-location">
     <h3>Where are these files stored?</h3>
 
-    <p>When a file is opened in a text editor with an EditorConfig plugin, a search is performed in the current directory and all parent directories for a file called <code>.editorconfig</code>.  All found EditorConfig files are searched for sections with section names matching the current filename.  The search will stop if an EditorConfig file is found with the <code>root</code> property set to <code>true</code> or when reaching the root filesystem directory.</p>
+    <p>When opening a file, EditorConfig plugins look for a file named <code>.editorconfig</code> in the directory of the opened file and in every parent directory.  A search for <code>.editorconfig</code> files will stop if the root filepath is reached or an EditorConfig file with <code>root=true</code> is found.
 
-    <p>Files are read top to bottom and the most recent rules found take precedence.  If multiple <code>.editorconfig</code> files have matching sections, the rules from the closer <code>.editorconfig</code> file are read last, so properties in closer files take precedence.</p>
+    <p>EditorConfig files are read top to bottom and the closest EditorConfig files are read last.  Properties from matching EditorConfig sections are applied in the order they were read, so properties in closer files take precedence.</p>
   </section>
 
   <section id="file-format-details">
-    <h3>Details of the file format</h3>
+    <h3>File Format Details</h3>
 
-    <p>EditorConfig files use an INI file format in which section names are <a href="http://en.wikipedia.org/wiki/Glob_(programming)">globs</a> matching filenames in a format accepted by the <a href="http://www.freebsd.org/cgi/man.cgi?query=fnmatch">fnmatch</a> C library.  Comments can be added to these files by prepending a semicolon (<code>;</code>) to the beginning of a line.  Comments and blank lines are ignored when parsing these files.</p>
-
-    <p>Filename globs containing path separators (<code>/</code>) match filepaths as expected.  For example <code>src/*.c</code> matches all <code>*.c</code> files directly below <code>src</code> directories.  Filename globs starting with a path separator match the path starting from the <code>.editorconfig</code> file only.  For example <code>/*.c</code> matches only C files in the directory of the found <code>.editorconfig</code> file.</p>
-
-    <p>EditorConfig files should be UTF-8 encoded.</p>
+    <p>EditorConfig files use an INI format with section names as filepath <a href="http://en.wikipedia.org/wiki/Glob_(programming)">globs</a>, similar to the format accepted by <a href="http://manpages.ubuntu.com/manpages/intrepid/man5/gitignore.5.html#contenttoc2">gitignore</a>.  For in-depth documentation on the EditorConfig file format see the <a href="core-docs/editorconfig-format.html">file format documentation page</a> in the EditorConfig manual.</p>
   </section>
 
   <section id="wildcards">
-    <h4>Wildcard patterns</h4>
+    <h4>Wildcard Patterns</h4>
 
-    <p>Section names in EditorConfig files are filename globs that support pattern matching through Unix shell-style wildcards.  These filename globs recognize the following as special characters for wildcard matching:</p>
+    <p>Special characters recognized in section names for wildcard matching:</p>
 
     <table>
-      <tr><td><code>*</code></td><td>Matches any string of characters, except for path separators (<code>/</code> character)</td></tr>
+      <tr><td><code>*</code></td><td>Matches any string of characters, except path separators (<code>/</code>)</td></tr>
       <tr><td><code>**</code></td><td>Matches any string of characters</td></tr>
       <tr><td><code>?</code></td><td>Matches any single character</td></tr>
       <tr><td><code>[seq]</code></td><td>Matches any single character in <i>seq</i></td></tr>
       <tr><td><code>[!seq]</code></td><td>Matches any single character not in <i>seq</i></td></tr>
     </table>
 
-    <p>The backslash character (<code>\</code>) can be used to escape a character so it is not interpreted as a special character.</p>
+    <p>Special characters can be escaped with a backslash so they will not be interpreted as wildcard patterns.</p>
   </section>
 
   <section id="supported-properties">
-    <h4>Supported properties</h4>
-    <p>EditorConfig file sections contain properties, which are name-value pairs separated by an equal sign (<code>=</code>).  EditorConfig plugins will ignore unrecognized property names and properties with invalid values.</p>
-
-    <p>Here is the list of all property names understood by EditorConfig and all valid values for these properties:</p>
-
+    <h4>Supported Properties</h4>
     <ul class="property-definitions">
       <li><dfn>indent_style</dfn>: set to <q>tab</q> or <q>space</q> to use hard tabs or soft tabs respectively.</li>
       <li><dfn>indent_size</dfn>: a whole number defining the number of columns used for each indentation level and the width of soft tabs (when supported).</li>
@@ -85,8 +77,6 @@ indent_size = 2
       <li><dfn>end_of_line</dfn>: set to <q>LF</q>, <q>CR</q>, or <q>CRLF</q> to control how line breaks are represented.</li>
       <li><dfn>root</dfn>: special property that should be specified at the top of the file outside of any sections.  Set to <q>true</q> to stop <code>.editorconfig</code> files search on current file.</li>
     </ul>
-
-    <p>Property names are case insensitive and all property names are lowercased when parsing.  The values of the <strong>indent_style</strong> and <strong>end_of_line</strong> properties are also case insensitive and are lowercased when parsing.</p>
   </section>
 
 </section>
