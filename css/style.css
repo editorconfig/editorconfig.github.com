@@ -193,6 +193,18 @@ table tbody th {
   vertical-align: top;
 }
 
+/* =============================================================================
+   Pygments highlighting styles 
+   Colors based on solarized <http://ethanschoonover.com/solarized>
+   ========================================================================== */
+
+.highlight pre { background-color: #fdf6e3; }
+.highlight .c { color: #93a1a1; font-style: italic; } /* Comment */
+.highlight .k { color: #cb4b16; font-weight: bold } /* Keyword (Section Name) */
+.highlight .o { color: #586e75; font-weight: bold } /* Operator (Equals Signs) */
+.highlight .s { color: #2aa198; } /* String Literal (Property Value) */
+.highlight .na { color: #b58900; } /* Name Attribute (Property Name) */
+
 /* ==|== print styles =======================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
