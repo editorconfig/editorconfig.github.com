@@ -109,8 +109,8 @@ h1.title { font-size: 2.25em; }
  * Also: hot pink! (or customize the background color to match your design)
  */
 
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::-moz-selection { background: #2953a6; color: #fff; text-shadow: none; }
+::selection { background: #2953a6; color: #fff; text-shadow: none; }
 
 
 /* =============================================================================
