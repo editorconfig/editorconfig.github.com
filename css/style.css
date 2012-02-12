@@ -103,6 +103,12 @@ h1.title { font-size: 2.25em; }
   h1.title { font-size: 2em; }
 }
 
+#sidebar .github-button { background-color: #fefefe; border: 2px outset #999; border-radius: 0.5em; margin: 0.0em; padding: 0.1em 0; }
+#sidebar .github-button:hover { background-color: #ffffff; border-color: #777; } /* TODO: Make mouse image change on hover */
+#sidebar .github-button:active { background-color: #fdfdfd; border-style: inset; }
+#sidebar .github-button img { float: left; max-width: 2.3em; margin-left: 0.75em; }
+#sidebar .github-button h4 { float: left; text-align: center; max-width: 6.5em; margin: 0.4em 0.6em; text-decoration: none; }
+
 /* 
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate
