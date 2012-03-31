@@ -2,6 +2,7 @@ var searchData=
 [
   ['editorconfig_5fget_5ferror_5fmsg',['editorconfig_get_error_msg',['../editorconfig_8h.html#a779a54d57d57198a089ea7221751330c',1,'editorconfig.h']]],
   ['editorconfig_5fget_5fversion',['editorconfig_get_version',['../editorconfig_8h.html#a388429db79c58c67f166a7daa026e695',1,'editorconfig.h']]],
+  ['editorconfig_5fget_5fversion_5fsuffix',['editorconfig_get_version_suffix',['../editorconfig_8h.html#a353d4f1b9fd424c837a2efba6c6b02ad',1,'editorconfig.h']]],
   ['editorconfig_5fhandle_5fdestroy',['editorconfig_handle_destroy',['../editorconfig__handle_8h.html#add8960b396594d796843df56a6fd0cfe',1,'editorconfig_handle.h']]],
   ['editorconfig_5fhandle_5fget_5fconf_5ffile_5fname',['editorconfig_handle_get_conf_file_name',['../editorconfig__handle_8h.html#a5d8fd295880d6512751a7f3c840e3ce0',1,'editorconfig_handle.h']]],
   ['editorconfig_5fhandle_5fget_5ferr_5ffile',['editorconfig_handle_get_err_file',['../editorconfig__handle_8h.html#ae0c5207a1986dfea2f641008ddefdd93',1,'editorconfig_handle.h']]],

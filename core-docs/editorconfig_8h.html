@@ -122,6 +122,8 @@ Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the error message from the error number returned by <a class="el" href="editorconfig_8h.html#add6bebe96bf90c48fef01cf5300ddf92" title="Parse editorconfig files corresponding to the file path given by full_filename, and related informati...">editorconfig_parse()</a>.  <a href="#a779a54d57d57198a089ea7221751330c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editorconfig_8h.html#a388429db79c58c67f166a7daa026e695">editorconfig_get_version</a> (int *major, int *minor, int *subminor)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the version number of EditorConfig.  <a href="#a388429db79c58c67f166a7daa026e695"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editorconfig_8h.html#a353d4f1b9fd424c837a2efba6c6b02ad">editorconfig_get_version_suffix</a> (void)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the version suffix.  <a href="#a353d4f1b9fd424c837a2efba6c6b02ad"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Header file of EditorConfig. </p>
@@ -187,7 +189,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get the error message from the error number returned by <a class="el" href="editorconfig_8h.html#add6bebe96bf90c48fef01cf5300ddf92" title="Parse editorconfig files corresponding to the file path given by full_filename, and related informati...">editorconfig_parse()</a>. </p>
-<p>An example is available at src/bin/main.c in editorconfig source code.</p>
+<p>An example is available at <a href="https://github.com/editorconfig/editorconfig-core/blob/master/src/bin/main.c">src/bin/main.c</a> in EditorConfig Core source code.</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">err_num</td><td>The error number that is used to obtain the error message.</td></tr>
@@ -230,7 +232,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get the version number of EditorConfig. </p>
-<p>An example is available at src/bin/main.c in EditorConfig source code.</p>
+<p>An example is available at <a href="https://github.com/editorconfig/editorconfig-core/blob/master/src/bin/main.c">src/bin/main.c</a> in EditorConfig Core source code.</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">major</td><td>If not null, the integer pointed by major will be filled with the major version of EditorConfig.</td></tr>
@@ -240,6 +242,26 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>None. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a353d4f1b9fd424c837a2efba6c6b02ad"></a><!-- doxytag: member="editorconfig.h::editorconfig_get_version_suffix" ref="a353d4f1b9fd424c837a2efba6c6b02ad" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* <a class="el" href="editorconfig_8h.html#a353d4f1b9fd424c837a2efba6c6b02ad">editorconfig_get_version_suffix</a> </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the version suffix. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The version suffix, such as "-development" for a development version, empty string for a stable version. </dd></dl>
 
 </div>
 </div>
@@ -269,7 +291,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Parse editorconfig files corresponding to the file path given by full_filename, and related information is input and output in h. </p>
-<p>An example is available at src/bin/main.c in editorconfig source code.</p>
+<p>An example is available at <a href="https://github.com/editorconfig/editorconfig-core/blob/master/src/bin/main.c">src/bin/main.c</a> in EditorConfig Core source code.</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">full_filename</td><td>The full path of a file that is edited by the editor for which the parsing result is.</td></tr>
@@ -311,7 +333,7 @@ Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="editorconfig_8h.html">editorconfig.h</a>      </li>
 
-    <li class="footer">Generated on Thu Feb 9 2012 07:18:44 for EditorConfig by
+    <li class="footer">Generated on Sat Mar 31 2012 17:00:42 for EditorConfig by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

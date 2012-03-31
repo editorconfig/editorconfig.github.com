@@ -5,5 +5,6 @@ var editorconfig_8h =
     [ "EDITORCONFIG_PARSE_VERSION_TOO_NEW", "editorconfig_8h.html#afe623becaffb01263d1b22bd320f7916", null ],
     [ "editorconfig_get_error_msg", "editorconfig_8h.html#a779a54d57d57198a089ea7221751330c", null ],
     [ "editorconfig_get_version", "editorconfig_8h.html#a388429db79c58c67f166a7daa026e695", null ],
+    [ "editorconfig_get_version_suffix", "editorconfig_8h.html#a353d4f1b9fd424c837a2efba6c6b02ad", null ],
     [ "editorconfig_parse", "editorconfig_8h.html#add6bebe96bf90c48fef01cf5300ddf92", null ]
 ];
