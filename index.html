@@ -17,7 +17,7 @@ description: EditorConfig is a file format and collection of text editor plugins
 
   <section id="example-file">
     <h3>Example file</h3>
-    <p>Below is an example file that sets indentation styles for Python and JavaScript files and line ending styles for all files.  All characters appearing after a semicolon (<code>;</code>) are comments added for clarification. A list of some real world examples could be found <a href="http://github.com/editorconfig/editorconfig/wiki/Projects-Using-EditorConfig">here</a>.</p>
+    <p>Below is an example <code>.editorconfig</code> file setting end of line and indentation styles for Python and JavaScript files.
 
 {% highlight ini %}
 ; top-most EditorConfig file
@@ -32,11 +32,17 @@ end_of_line = LF
 indent_style = space
 indent_size = 4
 
-; Tab (2 column) indentation
+; Tab indentation (no size specified)
 [*.js]
 indent_style = tab
+
+; Indentation override for all JS under lib directory
+[lib/**.js]
+indent_style = space
 indent_size = 2
 {% endhighlight %}
+
+    Check the Wiki for some real world examples of <a href="http://github.com/editorconfig/editorconfig/wiki/Projects-Using-EditorConfig">projects EditorConfig files</a>.</p>
   </section>
 
   <section id="file-location">
@@ -50,7 +56,7 @@ indent_size = 2
   <section id="file-format-details">
     <h3>File Format Details</h3>
 
-    <p>EditorConfig files use an INI format with section names as filepath <a href="http://en.wikipedia.org/wiki/Glob_(programming)">globs</a>, similar to the format accepted by <a href="http://manpages.ubuntu.com/manpages/intrepid/man5/gitignore.5.html#contenttoc2">gitignore</a>.  For in-depth documentation on the EditorConfig file format see the <a href="http://docs.editorconfig.org/en/latest/editorconfig-format.html">file format documentation page</a> in the EditorConfig manual.</p>
+    <p>EditorConfig files use an INI format with section names as filepath <a href="http://en.wikipedia.org/wiki/Glob_(programming)">globs</a>, similar to the format accepted by <a href="http://manpages.ubuntu.com/manpages/intrepid/man5/gitignore.5.html#contenttoc2">gitignore</a>.  Forward slashes (\) are used as path separators and semicolons (;) or octothorpes (#) are used for comments.  Filepath glob patterns and currently-supported EditorConfig properties are explained below.</p>
   </section>
 
   <section id="wildcards">
