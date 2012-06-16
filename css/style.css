@@ -113,11 +113,16 @@ h1.title { font-size: 2.25em; }
   }
 }
 
-#sidebar .github-button { background-color: #fefefe; border: 2px outset #999; border-radius: 0.5em; margin: 0.0em; padding: 0.1em 0; }
-#sidebar .github-button:hover { background-color: #ffffff; border-color: #777; } /* TODO: Make mouse image change on hover */
-#sidebar .github-button:active { background-color: #fdfdfd; border-style: inset; }
-#sidebar .github-button img { float: left; max-width: 2.3em; margin-left: 0.75em; }
-#sidebar .github-button h4 { float: left; text-align: center; max-width: 6.5em; margin: 0.4em 0.6em; text-decoration: none; }
+#sidebar .button { background-color: #fefefe; border: 2px outset #999; border-radius: 0.5em; margin: 0.5em 0; padding: 0.1em 0; }
+#sidebar .button:hover { background-color: #ffffff; border-color: #777; }
+#sidebar .button:active { background-color: #fdfdfd; border-style: inset; }
+#sidebar .button img { float: left; margin-left: 0.75em; }
+#sidebar .button h4 { float: left; text-align: center; margin: 0.4em 0.6em; text-decoration: none; }
+
+#sidebar .github.button img { max-width: 2.3em; }
+#sidebar .github.button h4 { max-width: 6.5em; }
+#sidebar .twitter.button img { max-width: 3.3em; }
+#sidebar .twitter.button h4 { max-width: 5.0em; }
 
 /* 
  * Remove text-shadow in selection highlight: h5bp.com/i
