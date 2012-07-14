@@ -79,11 +79,14 @@ indent_size = 2
     <h4>Supported Properties</h4>
     <ul class="property-definitions">
       <li><dfn>indent_style</dfn>: set to <q>tab</q> or <q>space</q> to use hard tabs or soft tabs respectively.</li>
-      <li><dfn>indent_size</dfn>: a whole number defining the number of columns used for each indentation level and the width of soft tabs (when supported). If this equals to "tab", the <strong>indent_size</strong> will be set to the tab size, which should be <strong>tab_width</strong> if <strong>tab_width</strong> is specified, or the tab size set by editor if <strong>tab_width</strong> is not specified.</li>
+      <li><dfn>indent_size</dfn>: a whole number defining the number of columns used for each indentation level and the width of soft tabs (when supported).  When set to <q>tab</q>, the value of <strong>tab_width</strong> (if specified) will be used.</li>
       <li><dfn>tab_width</dfn>: a whole number defining the number of columns used to represent a tab character.  This defaults to the value of <strong>indent_size</strong> and should not usually need to be specified.</li>
       <li><dfn>end_of_line</dfn>: set to <q>LF</q>, <q>CR</q>, or <q>CRLF</q> to control how line breaks are represented.</li>
       <li><dfn>root</dfn>: special property that should be specified at the top of the file outside of any sections.  Set to <q>true</q> to stop <code>.editorconfig</code> files search on current file.</li>
     </ul>
+
+    <p>It is acceptable and often prefered to leave certain EditorConfig properties unspecified.  For example <strong>tab_width</strong> need not be specified unless it needs to be different from the value of <strong>indent_size</strong>.  Also when <strong>indent_style</strong> is set to <q>tab</q> it may be desireable to leave <strong>indent_size</strong> unspecified so readers may view the file using their prefered indentation format.
+
   </section>
 
 </section>
