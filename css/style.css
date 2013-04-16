@@ -124,6 +124,8 @@ h1.title { font-size: 2.25em; }
 #sidebar .twitter.button img { max-width: 3.3em; }
 #sidebar .twitter.button h4 { max-width: 5.0em; }
 
+#sidebar .social-sharing-button {float: left; display: inline-block;}
+
 /* 
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate
