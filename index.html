@@ -54,6 +54,8 @@ indent_size = 2
     <p>When opening a file, EditorConfig plugins look for a file named <code>.editorconfig</code> in the directory of the opened file and in every parent directory.  A search for <code>.editorconfig</code> files will stop if the root filepath is reached or an EditorConfig file with <code>root=true</code> is found.
 
     <p>EditorConfig files are read top to bottom and the closest EditorConfig files are read last.  Properties from matching EditorConfig sections are applied in the order they were read, so properties in closer files take precedence.</p>
+
+    <p><strong>For Windows Users:</strong> To create an <code>.editorconfig</code> file within Windows Explorer, you need to create a file named <code>.editorconfig.</code>, which Windows Explorer will automatically rename to <code>.editorconfig</code>.</p>
   </section>
 
   <section id="file-format-details">
