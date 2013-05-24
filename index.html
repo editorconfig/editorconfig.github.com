@@ -22,7 +22,8 @@ description: EditorConfig is a file format and collection of text editor plugins
 {% highlight ini %}
 ; EditorConfig is awesome: http://EditorConfig.org
 
-root = true  ; top-most EditorConfig file
+; top-most EditorConfig file
+root = true
 
 ; Unix-style newlines with a newline ending every file
 [*]
@@ -53,12 +54,16 @@ indent_size = 2
     <p>When opening a file, EditorConfig plugins look for a file named <code>.editorconfig</code> in the directory of the opened file and in every parent directory.  A search for <code>.editorconfig</code> files will stop if the root filepath is reached or an EditorConfig file with <code>root=true</code> is found.
 
     <p>EditorConfig files are read top to bottom and the closest EditorConfig files are read last.  Properties from matching EditorConfig sections are applied in the order they were read, so properties in closer files take precedence.</p>
+
+    <p><strong>For Windows Users:</strong> To create an <code>.editorconfig</code> file within Windows Explorer, you need to create a file named <code>.editorconfig.</code>, which Windows Explorer will automatically rename to <code>.editorconfig</code>.</p>
   </section>
 
   <section id="file-format-details">
     <h3>File Format Details</h3>
 
-    <p>EditorConfig files use an INI format with section names as filepath <a href="http://en.wikipedia.org/wiki/Glob_(programming)">globs</a>, similar to the format accepted by <a href="http://manpages.ubuntu.com/manpages/intrepid/man5/gitignore.5.html#contenttoc2">gitignore</a>.  Forward slashes (/) are used as path separators and semicolons (;) or octothorpes (#) are used for comments.  Filepath glob patterns and currently-supported EditorConfig properties are explained below.</p>
+    <p>EditorConfig files use an INI format with section names as filepath <a href="http://en.wikipedia.org/wiki/Glob_(programming)">globs</a>, similar to the format accepted by <a href="http://manpages.ubuntu.com/manpages/intrepid/man5/gitignore.5.html#contenttoc2">gitignore</a>. Forward slashes (/) are used as path separators and semicolons (;) or octothorpes (#) are used for comments.  Filepath glob patterns and currently-supported EditorConfig properties are explained below.</p>
+
+    <p><em>EditorConfig files should be UTF-8 encoded, with either CRLF or LF line separators.</em></p>
   </section>
 
   <section id="wildcards">
@@ -72,6 +77,7 @@ indent_size = 2
       <tr><td><code>?</code></td><td>Matches any single character</td></tr>
       <tr><td><code>[seq]</code></td><td>Matches any single character in <i>seq</i></td></tr>
       <tr><td><code>[!seq]</code></td><td>Matches any single character not in <i>seq</i></td></tr>
+      <tr><td><code>{s1,s2,s3}</code></td><td>Matches any of the strings given (separated by commas) (<strong>Available since EditorConfig Core 0.11.0</strong>)</td></tr>
     </table>
 
     <p>Special characters can be escaped with a backslash so they will not be interpreted as wildcard patterns.</p>
@@ -90,6 +96,8 @@ indent_size = 2
       <li><dfn>insert_final_newline</dfn>: set to <q>true</q> ensure file ends with a newline when saving and <q>false</q> to ensure it doesn't.</li>
       <li><dfn>root</dfn>: special property that should be specified at the top of the file outside of any sections.  Set to <q>true</q> to stop <code>.editorconfig</code> files search on current file.</li>
     </ul>
+
+    <p>Currently all current properties and values are case insensitive. They are lowercased when parsed.</p>
 
     <p>It is acceptable and often prefered to leave certain EditorConfig properties unspecified.  For example <strong>tab_width</strong> need not be specified unless it differs from the value of <strong>indent_size</strong>.  Also when <strong>indent_style</strong> is set to <q>tab</q> it may be desireable to leave <strong>indent_size</strong> unspecified so readers may view the file using their prefered indentation format.  Additionally if a property is not standardized in your project (<strong>end_of_line</strong> for example) it may be best to leave it blank.</p>
 
@@ -130,14 +138,14 @@ indent_size = 2
   <section id="create-a-plugin">
     <h3>Create a plugin</h3>
 
-    <p>EditorConfig plugins can be developed by using one the EditorConfig core libraries.  The EditorConfig core libraries accept as input the file being edited, find and parse relevant <code>.editorconfig</code> files, and pass back the properties that should be used. Please ignore any unrecognized properties and property values in your editor plugin for future compatibility, since new properties and permitted values will be added in the future. Currently there is a <a href="https://github.com/editorconfig/editorconfig-core#readme">C library</a> and a <a href="https://github.com/editorconfig/editorconfig-core-py#readme">Python library</a>, and a <a href=https://github.com/editorconfig/editorconfig-core-py/tree/master/java-binding#readme>Java binding</a> for the Python library.</p>
+    <p>EditorConfig plugins can be developed by using one the EditorConfig core libraries.  The EditorConfig core libraries accept as input the file being edited, find and parse relevant <code>.editorconfig</code> files, and pass back the properties that should be used. Please ignore any unrecognized properties and property values in your editor plugin for future compatibility, since new properties and permitted values will be added in the future. Currently there is a <a href="https://github.com/editorconfig/editorconfig-core-c#readme">C library</a> and a <a href="https://github.com/editorconfig/editorconfig-core-py#readme">Python library</a>, and a <a href="https://github.com/editorconfig/editorconfig-core-java-binding#readme">Java binding</a> for the Python library.</p>
     <p>If you are planning on creating a new plugin, use the <a href="http://groups.google.com/group/editorconfig">mailing list</a> to let us know so we can help out and link to your plugin once it's created.  If you plan on using one of the EditorConfig cores as a library or command line interface, the <a href="http://docs.editorconfig.org">C library documentation</a>, <a href="http://pydocs.editorconfig.org">Python library documentation</a> or <a href="http://javadocs.editorconfig.org">Java binding documentation</a> may be helpful.</p>
     <p>More details could be found on the <a href=https://github.com/editorconfig/editorconfig/wiki/Plugin-How-To>Plugin-How-To wiki page</a>.</p>
   </section>
 
   <section id="contributors">
     <h3>Authors and Contributors</h3>
-    <p>EditorConfig core code and current plugins (unless otherwise stated) were co-created by <a href="http://treyhunner.com">Trey Hunner</a> and <a href="http://www.topbug.net">Hong Xu</a>. Visual Studio plugin was created by <a href=http://www.swansontec.com/>William Swanson</a>. Sublime Text 2 plugin was created by <a href=http://sindresorhus.com/>Sindre Sorhus</a>. TextMate plugin was created by <a href="http://robbrackett.com/">Rob Brackett</a>. EditorConfig logo and illustrations are drawn by <a href="http://squirrelmuffins.com">Kat On</a>.
+    <p>EditorConfig core code and current plugins (unless otherwise stated) were co-created by <a href="http://treyhunner.com">Trey Hunner</a> and <a href="http://www.topbug.net">Hong Xu</a>. Visual Studio plugin was created by <a href="http://www.swansontec.com/">William Swanson</a> and is currently maintained by <a href="http://mpdreamz.nl/">Martijn Laarman</a>. Sublime Text 2 plugin was created by <a href=http://sindresorhus.com/>Sindre Sorhus</a>. TextMate plugin was created by <a href="http://robbrackett.com/">Rob Brackett</a>. EditorConfig logo and illustrations are drawn by <a href="http://squirrelmuffins.com">Kat On</a>.
   </section>
 
 </section>
