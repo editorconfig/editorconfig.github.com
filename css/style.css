@@ -70,7 +70,7 @@ header { text-align: center; }
 
 section { padding-top: 10px; margin-top: -10px; }
 
-h1.title { font-size: 2.25em; }
+h1.title { margin-top: 0.5em; }
 
 /* =============================================================================
    Sidebar customizations
@@ -100,7 +100,6 @@ h1.title { font-size: 2.25em; }
   #sidebar { display: none; }
   .container { padding-left: 0.5em; padding-right: 0.5em; }
   .container > #content { margin-left: 0; }
-  h1.title { font-size: 2em; }
 }
 @media only screen and (max-width: 500px) {
   body {
@@ -168,16 +167,16 @@ pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; border-rad
 q { quotes: '\201C' '\201D'; }
 
 h1, h2, h3, h4 { margin: 0; padding: 0; }
-h1 { font-size: 2em; margin: 0.6em 0; }
-h2 { font-size: 1.5em; margin: 0.8em 0; }
-h3 { font-size: 1.17em; margin: 1em 0; }
+h1 { font-size: 2.370em; margin: 0.6em 0; }
+h2 { font-size: 1.778em; margin: 0.8em 0; }
+h3 { font-size: 1.333em; margin: 1em 0; }
 h4 { font-size: 1em; margin: 1.3em 0; }
 
 @media only screen and (max-width: 450px) {
-  h1 { font-size: 1.750em; margin: 0.525em 0; }
-  h2 { font-size: 1.313em; margin: 0.7em 0; }
-  h3 { font-size: 1.024em; margin: 0.875em 0; }
-  h4 { font-size: 0.875em; margin: 1.138em 0; }
+  h1 { font-size: 2.071em; margin: 0.525em 0; }
+  h2 { font-size: 1.554em; margin: 0.7em 0; }
+  h3 { font-size: 1.165em; margin: 0.875em 0; }
+  h4 { font-size: 1em; margin: 1.138em 0; }
 }
 
 /* =============================================================================
