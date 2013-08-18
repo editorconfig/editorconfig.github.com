@@ -123,8 +123,8 @@ header h1 { padding-top: 0.5em; }
 #sidebar .button { background-color: #fefefe; border: 2px outset #999; border-radius: 0.5em; margin: 0.5em 0; padding: 0.1em 0; }
 #sidebar .button:hover { background-color: #ffffff; border-color: #777; }
 #sidebar .button:active { background-color: #fdfdfd; border-style: inset; }
-#sidebar .button img { float: left; margin-left: 0.75em; }
-#sidebar .button strong { float: left; text-align: center; margin: 0.4em 0.6em; text-decoration: none; }
+#sidebar .button img { float: right; margin-right: 0.75em; }
+#sidebar .button strong { float: left; text-align: left; margin: 0.4em 0 0 1em; text-decoration: none; }
 
 #sidebar .github.button img { max-width: 2.3em; }
 #sidebar .github.button strong { max-width: 6.5em; }
