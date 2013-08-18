@@ -51,8 +51,7 @@ header { text-align: left; padding: 0 1em; }
   zoom: 1;
   min-width: 40em;
   max-width: 50em;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 .container:before, .container:after {
   display: table;
@@ -81,17 +80,16 @@ h1.title { margin-top: 0.5em; }
 
 #sidebar .logo { float: left; display: block; height: 4.5em; padding: 0.5em 0; text-align: center; width: 100%; }
 #sidebar .logo img { max-height: 4.5em; }
-#sidebar nav { clear: both; padding: 0 1em; }
+#sidebar nav { clear: both; padding: 0.5em 1em; }
 #sidebar nav > * { font-size: 0.8em; }
-#sidebar h4 { margin-bottom: 0; margin: 1em 0; }
+#sidebar h4 { margin-bottom: 0; padding-bottom: 1em; }
 #sidebar a { text-decoration: none; display: block; color: #000; }
 #sidebar h4 a { color: #000; }
 #sidebar li > ol { margin-top: 0; }
-#sidebar li { list-style: none; margin: 1em 0; }
-#sidebar li li { margin: 0.25em 0; }
-#sidebar li > a { color: #666; }
-#sidebar li.active { background-color: #eee; }
+#sidebar li { list-style: none; padding: 0; }
+#sidebar li > a { color: #666; padding: 0.5em 0.25em; }
 #sidebar li.active > a { color: #000;  }
+#sidebar li:hover > a { background-color: #f0f0ff; color: #000;  }
 @media only screen and (max-width: 850px) {
   body {
     font-size: 16px;
@@ -190,7 +188,6 @@ ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
 dd { margin: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
-nav ol li { padding: 0.25em; }
 nav ol { margin-top: 0; }
 
 ul.property-definitions { list-style: none; lyst-style-image: none; margin: 0; padding: 0; }
