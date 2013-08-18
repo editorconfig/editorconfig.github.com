@@ -36,10 +36,6 @@ body { margin: 0; font-size: 20px; line-height: 1.231; background-color: #e0efef
 
 footer { margin: 1em; font-size: 0.75em; text-align: center; }
 
-header { text-align: left; padding: 0 1em; }
-
-#content { margin-top: 0.9em; }
-
 #main { padding: 1em; }
 #main, #sidebar nav { background-color: #fefefe; border: 1px solid #999; border-radius: 0.25em; margin: 1em 0; }
 
@@ -72,7 +68,8 @@ header { text-align: left; padding: 0 1em; }
 
 section { padding-top: 10px; margin-top: -10px; }
 
-h1.title { margin-top: 0.5em; }
+header { text-align: left; padding: 0 1em; height: 4.5em; }
+header h1 { padding-top: 0.5em; }
 
 .editor-logos li { float: left; list-style: none; width: 6.5em; height: 6.5em; padding: 0.7em; }
 .editor-logos a { outline: none; }
