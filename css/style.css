@@ -98,7 +98,12 @@ h1.title { margin-top: 0.5em; }
 }
 @media only screen and (max-width: 650px) {
   #sidebar { display: none; }
-  .container { padding-left: 0.5em; padding-right: 0.5em; }
+  .container {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    min-width: 30em;
+    max-width: 40em;
+  }
   .container > #content { margin-left: 0; }
 }
 @media only screen and (max-width: 500px) {
