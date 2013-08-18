@@ -32,15 +32,15 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 20px; line-height: 1.231; background-color: #f0f0f0; font-family: sans-serif; color: #222; }
+body { margin: 0; font-size: 20px; line-height: 1.231; background-color: #e0efef; font-family: sans-serif; color: #222; }
 
 footer { margin: 1em; font-size: 0.75em; text-align: center; }
 
-header { text-align: center; }
+header { text-align: left; padding: 0 1em; }
 
 #content { margin-top: 0.9em; }
 
-#main { padding: 0.25em 1em; }
+#main { padding: 1em; }
 #main, #sidebar nav { background-color: #fefefe; border: 1px solid #999; border-radius: 0.25em; margin: 1em 0; }
 
 /* Fluid container styles based on Twitter bootstrap */
@@ -49,6 +49,9 @@ header { text-align: center; }
   padding-left: 1.25em;
   padding-right: 1.25em;
   zoom: 1;
+  min-width: 40em;
+  max-width: 50em;
+  margin: 0 auto;
 }
 .container:before, .container:after {
   display: table;
@@ -61,7 +64,6 @@ header { text-align: center; }
 .container > #sidebar {
   position: fixed;
   top: 0;
-  left: 1.25em;
   width: 11em;
 }
 .container > #content {
@@ -70,7 +72,7 @@ header { text-align: center; }
 
 section { padding-top: 10px; margin-top: -10px; }
 
-h1.title { font-size: 2.25em; }
+h1.title { margin-top: 0.5em; }
 
 /* =============================================================================
    Sidebar customizations
@@ -78,18 +80,16 @@ h1.title { font-size: 2.25em; }
 
 #sidebar .logo { float: left; display: block; height: 4.5em; padding: 0.5em 0; text-align: center; width: 100%; }
 #sidebar .logo img { max-height: 4.5em; }
-#sidebar nav { clear: both; }
+#sidebar nav { clear: both; padding: 0.5em 1em; }
 #sidebar nav > * { font-size: 0.8em; }
-#sidebar h4 { margin-bottom: 0; margin-left: 0.5em; }
-#sidebar a { text-decoration: none; display: block; color: #000; padding-left: 0.5em; }
+#sidebar h4 { margin-bottom: 0; padding-bottom: 1em; }
+#sidebar a { text-decoration: none; display: block; color: #000; }
 #sidebar h4 a { color: #000; }
-#sidebar ol { margin: 0.5em; }
 #sidebar li > ol { margin-top: 0; }
-#sidebar li { list-style: none; margin: 1em 0; }
-#sidebar li li { margin: 0.25em 0; }
-#sidebar li > a { color: #666; }
-#sidebar li.active { background-color: #eee; }
+#sidebar li { list-style: none; padding: 0; }
+#sidebar li > a { color: #666; padding: 0.5em 0.25em; }
 #sidebar li.active > a { color: #000;  }
+#sidebar li:hover > a { background-color: #f0f0ff; color: #000;  }
 @media only screen and (max-width: 850px) {
   body {
     font-size: 16px;
@@ -98,9 +98,13 @@ h1.title { font-size: 2.25em; }
 }
 @media only screen and (max-width: 650px) {
   #sidebar { display: none; }
-  .container { padding-left: 0.5em; padding-right: 0.5em; }
+  .container {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    min-width: 30em;
+    max-width: 40em;
+  }
   .container > #content { margin-left: 0; }
-  h1.title { font-size: 2em; }
 }
 @media only screen and (max-width: 500px) {
   body {
@@ -117,12 +121,12 @@ h1.title { font-size: 2.25em; }
 #sidebar .button:hover { background-color: #ffffff; border-color: #777; }
 #sidebar .button:active { background-color: #fdfdfd; border-style: inset; }
 #sidebar .button img { float: left; margin-left: 0.75em; }
-#sidebar .button h4 { float: left; text-align: center; margin: 0.4em 0.6em; text-decoration: none; }
+#sidebar .button strong { float: left; text-align: center; margin: 0.4em 0.6em; text-decoration: none; }
 
 #sidebar .github.button img { max-width: 2.3em; }
-#sidebar .github.button h4 { max-width: 6.5em; }
+#sidebar .github.button strong { max-width: 6.5em; }
 #sidebar .twitter.button img { max-width: 3.3em; }
-#sidebar .twitter.button h4 { max-width: 5.0em; }
+#sidebar .twitter.button strong { max-width: 5.0em; }
 
 #sidebar .social-sharing-button {float: left; display: inline-block;}
 
@@ -157,6 +161,8 @@ abbr[title] { border-bottom: 1px dotted; }
 
 b, strong { font-weight: bold; }
 
+p { margin: 0 0 2em 0; }
+
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
 /* Redeclare monospace font family: h5bp.com/j */
@@ -167,17 +173,16 @@ pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; border-rad
 
 q { quotes: '\201C' '\201D'; }
 
-h1, h2, h3, h4 { margin: 0; padding: 0; }
-h1 { font-size: 2em; margin: 0.6em 0; }
-h2 { font-size: 1.5em; margin: 0.8em 0; }
-h3 { font-size: 1.17em; margin: 1em 0; }
-h4 { font-size: 1em; margin: 1.3em 0; }
+h1, h2, h3, h4 { margin: 0; padding: 0; font-weight: normal; margin: 0 0 0.5em 0; }
+h1 { font-size: 2.370em; }
+h2 { font-size: 1.778em; }
+h3 { font-size: 1.333em; }
+h4 { font-size: 1em; font-variant: small-caps; }
 
 @media only screen and (max-width: 450px) {
-  h1 { font-size: 1.750em; margin: 0.525em 0; }
-  h2 { font-size: 1.313em; margin: 0.7em 0; }
-  h3 { font-size: 1.024em; margin: 0.875em 0; }
-  h4 { font-size: 0.875em; margin: 1.138em 0; }
+  h1 { font-size: 2.071em; }
+  h2 { font-size: 1.554em; }
+  h3 { font-size: 1.165em; }
 }
 
 /* =============================================================================
@@ -188,7 +193,6 @@ ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
 dd { margin: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
-nav ol li { padding: 0.25em; }
 nav ol { margin-top: 0; }
 
 ul.property-definitions { list-style: none; lyst-style-image: none; margin: 0; padding: 0; }
