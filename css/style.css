@@ -72,9 +72,16 @@ section { padding-top: 10px; margin-top: -10px; }
 header { text-align: left; padding: 0 1em; height: 4.5em; }
 header h1 { padding-top: 0.5em; }
 
-.editor-logos li { float: left; list-style: none; width: 6.5em; height: 6.5em; padding: 0.7em; }
+.editor-logos { padding: 0; margin: 0; }
+.editor-logos li {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 20%;
+  padding: 2.5%;
+}
 .editor-logos a { outline: none; }
-.editor-logos img { max-width: 6.5em; max-height: 6.5em; }
+.editor-logos img { max-width: 100%; max-height: 100%; }
 .editor-logos span { opacity: 0; float: left; }
 
 /* =============================================================================
@@ -108,6 +115,7 @@ header h1 { padding-top: 0.5em; }
     max-width: 40em;
   }
   .container > #content { margin-left: 0; }
+  .editor-logos li { width: 28%; height: 28%; padding: 2.6667%; }
 }
 @media only screen and (max-width: 500px) {
   body {
