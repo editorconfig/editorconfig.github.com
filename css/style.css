@@ -78,11 +78,11 @@ header h1 { padding-top: 0.5em; }
   list-style: none;
   width: 20%;
   height: 20%;
-  padding: 2.5%;
+  padding: 1.25% 2.5%;
 }
 .editor-logos a { outline: none; }
 .editor-logos img { max-width: 100%; max-height: 100%; }
-.editor-logos span { opacity: 0; float: left; }
+.editor-logos span { opacity: 0; float: left; margin-top: -3em; }
 
 /* =============================================================================
    Sidebar customizations
@@ -115,7 +115,7 @@ header h1 { padding-top: 0.5em; }
     max-width: 40em;
   }
   .container > #content { margin-left: 0; }
-  .editor-logos li { width: 28%; height: 28%; padding: 2.6667%; }
+  .editor-logos li { width: 28%; height: 28%; padding: 1.3333% 2.6667%; }
 }
 @media only screen and (max-width: 500px) {
   body {
