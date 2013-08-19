@@ -111,7 +111,6 @@ header h1 { padding-top: 0.5em; }
   .container {
     padding-left: 0.5em;
     padding-right: 0.5em;
-    min-width: 30em;
     max-width: 40em;
   }
   .container > #content { margin-left: 0; }
