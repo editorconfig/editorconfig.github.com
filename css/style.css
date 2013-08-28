@@ -255,7 +255,6 @@ table tbody th {
 .highlight .s { color: #2aa198; } /* String Literal (Property Value) */
 .highlight .na { color: #b58900; } /* Name Attribute (Property Name) */
 
-.highlight { overflow: hidden; }
 /* ==|== print styles =======================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
