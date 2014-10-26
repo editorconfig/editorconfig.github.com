@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
 
   var editorconfig = require('editorconfig');
 
@@ -10,18 +10,20 @@
   }
 
   // Resize textarea automatically
-  $('textarea').on('input', function (event) {
+  $('textarea').on('input', function () {
     // Set textarea height
     this.style.height = 'auto';
     this.style.height = this.scrollHeight + 16 + 'px';
   }).trigger('input');
 
-  function renderOutput (configFiles) {
+  function renderOutput(configFiles) {
     $('#output [name=filename]').each(function (index, el) {
-      var output = "";
-      var config = editorconfig.parseFromFiles(el.value, configFiles);
-      for (var key in config) {
-        output += key + " = " + config[key] + "\n";
+      var output = "", config, key;
+      config = editorconfig.parseFromFiles(el.value, configFiles);
+      for (key in config) {
+        if (config.hasOwnProperty(key)) {
+          output += key + " = " + config[key] + "\n";
+        }
       }
       $('#output pre').text(output);
     });
@@ -32,7 +34,7 @@
     renderOutput(createFiles());
   }).trigger('input');
 
-  $('.demo-link').click(function() {
+  $('.demo-link').click(function () {
     $('#editorconfig input').val($(this).siblings('input').val());
     $('#editorconfig textarea')
       .val($(this).siblings('pre').text())
