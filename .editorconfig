@@ -9,6 +9,10 @@ indent_size = 2
 indent_style = space
 indent_size = 2
 
+[*.js]
+indent_style = space
+indent_size = 2
+
 [*.y{a,}ml]
 indent_style = space
 indent_size = 2
