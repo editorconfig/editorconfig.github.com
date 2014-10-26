@@ -112,10 +112,12 @@ indent_size = 2
     <h3>Try It Out</h3>
 
     <div class="demo">
-      <div id="editorconfig">
+      <div id="editorconfig" class="demo-section">
         <h4>EditorConfig File</h4>
-        <input name="filename" value="/home/trey/somewebsite/.editorconfig" spellcheck="false">
-        <textarea name="file" spellcheck="false">[*]
+        <div class="code-container">
+          <div><input name="filename" value="/someproject/.editorconfig" spellcheck="false"></div>
+          <div>
+            <textarea name="file" spellcheck="false">[*]
 trim_trailing_whitespace = true
 insert_final_newline = true
 
@@ -127,12 +129,16 @@ indent_size = 2
 indent_style = space
 indent_size = 4
 </textarea>
+          </div>
+        </div>
       </div>
 
-      <div id="output">
+      <div id="output" class="demo-section">
         <h4>Enforced Style for a Given File</h4>
-        <input name="filename" value="/home/trey/somewebsite/index.html" spellcheck="false">
-        <pre class="properties"></pre>
+        <div class="code-container">
+          <div><input name="filename" value="/someproject/index.html" spellcheck="false"></div>
+          <div><pre class="properties"></pre></div>
+        </div>
       </div>
     </div>
   </section>
