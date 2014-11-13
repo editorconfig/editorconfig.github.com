@@ -3,10 +3,19 @@
   var editorconfig = require('editorconfig');
 
   function createFiles() {
-    return [{
-      name: $('#editorconfig input').val(),
-      contents: $('#editorconfig textarea').val()
-    }];
+    var configFiles = [], configSuffix = "/.editorconfig";
+    $('.js-ec-demo-config').each(function () {
+      var pathLength, configPath, form = $(this);
+      configPath = form.find('[name="filename"]').val();
+      pathLength = configPath.length - configSuffix.length;
+      if (configPath.indexOf(configSuffix, pathLength) !== -1) {
+        configFiles.push({
+          name: configPath,
+          contents: form.find('[name="file"]').val()
+        });
+      }
+    });
+    return configFiles;
   }
 
   // Resize textarea automatically
@@ -17,15 +26,16 @@
   }).trigger('input');
 
   function renderOutput(configFiles) {
-    $('#output [name=filename]').each(function (index, el) {
-      var output = "", config, key;
-      config = editorconfig.parseFromFiles(el.value, configFiles);
+    $('.js-ec-demo-output').each(function () {
+      var output = "", config, key, filename;
+      filename = $(this).find('[name="filename"]');
+      config = editorconfig.parseFromFiles(filename.val(), configFiles);
       for (key in config) {
         if (config.hasOwnProperty(key)) {
           output += key + " = " + config[key] + "\n";
         }
       }
-      $('#output pre').text(output);
+      $(this).find('pre').text(output);
     });
   }
 
@@ -33,14 +43,5 @@
   $('input, textarea').on('input', function () {
     renderOutput(createFiles());
   }).trigger('input');
-
-  $('.demo-link').click(function () {
-    $('#editorconfig input').val($(this).siblings('input').val());
-    $('#editorconfig textarea')
-      .val($(this).siblings('pre').text())
-      .trigger('input');
-    $.deck('go', 'demo');
-    return false;
-  });
 
 }(jQuery));
