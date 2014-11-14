@@ -93,7 +93,7 @@ header h1 { padding-top: 0.5em; }
   float: left;
   width: 50%;
 }
-.demo input, textarea, pre {
+.demo input, .demo textarea, .demo pre {
   display: block;
   width: 100%;
   padding: 2%;
