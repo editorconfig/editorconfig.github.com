@@ -71,7 +71,7 @@ indent_size = 2
   <section id="file-format-details">
     <h3>File Format Details</h3>
 
-    <p>EditorConfig files use an INI format that is compatible with the format used by <a href="https://docs.python.org/2/library/configparser.html">Python ConfigParser Library</a>, but [ and ] are allowed in the section names. The section names are filepath <a href="https://en.wikipedia.org/wiki/Glob_(programming)">globs</a>, similar to the format accepted by <a href="http://manpages.ubuntu.com/manpages/intrepid/man5/gitignore.5.html#contenttoc2">gitignore</a>. Forward slashes (/) are used as path separators and octothorpes (#) or semicolons (;) are used for comments. Comments should go on their own lines. EditorConfig files should be UTF-8 encoded, with either CRLF or LF line separators. </p>
+    <p>EditorConfig files use an INI format that is compatible with the format used by <a href="https://docs.python.org/2/library/configparser.html">Python ConfigParser Library</a>, but <code>[</code> and <code>]</code> are allowed in the section names. The section names are filepath <a href="https://en.wikipedia.org/wiki/Glob_(programming)">globs</a>, similar to the format accepted by <a href="http://manpages.ubuntu.com/manpages/intrepid/man5/gitignore.5.html#contenttoc2">gitignore</a>. Forward slashes (<code>/</code>) are used as path separators and octothorpes (<code>#</code>) or semicolons (<code>;</code>) are used for comments. Comments should go on their own lines. EditorConfig files should be UTF-8 encoded, with either <code><abbr title="Carriage Return Line Feed">CRLF</abbr></code> or <code><abbr title="Line Feed">LF</abbr></code> line separators.</p>
 
     <p>Filepath glob patterns and currently-supported EditorConfig properties are explained below.</p>
   </section>
@@ -97,19 +97,19 @@ indent_size = 2
     <h4>Supported Properties</h4>
     <p>Note that not all properties are supported by every plugin. The wiki has a <a href="https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties">complete list of properties</a>.</p>
     <ul class="property-definitions">
-      <li><dfn>indent_style</dfn>: set to <q>tab</q> or <q>space</q> to use hard tabs or soft tabs respectively.</li>
-      <li><dfn>indent_size</dfn>: a whole number defining the number of columns used for each indentation level and the width of soft tabs (when supported).  When set to <q>tab</q>, the value of <strong>tab_width</strong> (if specified) will be used.</li>
-      <li><dfn>tab_width</dfn>: a whole number defining the number of columns used to represent a tab character.  This defaults to the value of <strong>indent_size</strong> and doesn't usually need to be specified.</li>
-      <li><dfn>end_of_line</dfn>: set to <q>lf</q>, <q>cr</q>, or <q>crlf</q> to control how line breaks are represented.</li>
-      <li><dfn>charset</dfn>: set to <q>latin1</q>, <q>utf-8</q>, <q>utf-8-bom</q>, <q>utf-16be</q> or <q>utf-16le</q> to control the character set.  Use of <q>utf-8-bom</q> is discouraged.</li>
-      <li><dfn>trim_trailing_whitespace</dfn>: set to <q>true</q> to remove any whitespace characters preceding newline characters and <q>false</q> to ensure it doesn't.</li>
-      <li><dfn>insert_final_newline</dfn>: set to <q>true</q> ensure file ends with a newline when saving and <q>false</q> to ensure it doesn't.</li>
-      <li><dfn>root</dfn>: special property that should be specified at the top of the file outside of any sections.  Set to <q>true</q> to stop <code>.editorconfig</code> files search on current file.</li>
+      <li><dfn><code>indent_style</code></dfn>: set to <q>tab</q> or <q>space</q> to use hard tabs or soft tabs respectively.</li>
+      <li><dfn><code>indent_size</code></dfn>: a whole number defining the number of columns used for each indentation level and the width of soft tabs (when supported).  When set to <q>tab</q>, the value of <strong><code>tab_width</code></strong> (if specified) will be used.</li>
+      <li><dfn><code>tab_width</code></dfn>: a whole number defining the number of columns used to represent a tab character.  This defaults to the value of <strong><code>indent_size</code></strong> and doesn't usually need to be specified.</li>
+      <li><dfn><code>end_of_line</code></dfn>: set to <q>lf</q>, <q>cr</q>, or <q>crlf</q> to control how line breaks are represented.</li>
+      <li><dfn><code>charset</code></dfn>: set to <q>latin1</q>, <q>utf-8</q>, <q>utf-8-bom</q>, <q>utf-16be</q> or <q>utf-16le</q> to control the character set.  Use of <q>utf-8-bom</q> is discouraged.</li>
+      <li><dfn><code>trim_trailing_whitespace</code></dfn>: set to <q>true</q> to remove any whitespace characters preceding newline characters and <q>false</q> to ensure it doesn't.</li>
+      <li><dfn><code>insert_final_newline</code></dfn>: set to <q>true</q> ensure file ends with a newline when saving and <q>false</q> to ensure it doesn't.</li>
+      <li><dfn><code>root</code></dfn>: special property that should be specified at the top of the file outside of any sections.  Set to <q>true</q> to stop <code>.editorconfig</code> files search on current file.</li>
     </ul>
 
     <p>Currently all properties and values are case-insensitive. They are lowercased when parsed. Generally, if a property is not specified, the editor settings will be used, i.e. EditorConfig takes no effect on that part.</p>
 
-    <p>It is acceptable and often preferred to leave certain EditorConfig properties unspecified.  For example, <strong>tab_width</strong> need not be specified unless it differs from the value of <strong>indent_size</strong>.  Also, when <strong>indent_style</strong> is set to <q>tab</q>, it may be desirable to leave <strong>indent_size</strong> unspecified so readers may view the file using their preferred indentation format.  Additionally, if a property is not standardized in your project (<strong>end_of_line</strong> for example), it may be best to leave it blank.</p>
+    <p>It is acceptable and often preferred to leave certain EditorConfig properties unspecified.  For example, <strong><code>tab_width</code></strong> need not be specified unless it differs from the value of <strong><code>indent_size</code></strong>.  Also, when <strong><code>indent_style</code></strong> is set to <q>tab</q>, it may be desirable to leave <strong><code>indent_size</code></strong> unspecified so readers may view the file using their preferred indentation format.  Additionally, if a property is not standardized in your project (<strong><code>end_of_line</code></strong> for example), it may be best to leave it blank.</p>
 
   </section>
 
