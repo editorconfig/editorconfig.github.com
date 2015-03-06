@@ -1,1 +1,3 @@
-_site
+/_site/
+/node_modules/
+/Gemfile.lock

@@ -113,6 +113,41 @@ indent_size = 2
 
   </section>
 
+  <section id="demo">
+    <h3>Try It Out</h3>
+
+    <div class="demo">
+      <div class="demo-section">
+        <h4>EditorConfig File</h4>
+        <div class="js-ec-demo-config code-container">
+          <div><input name="filename" value="/someproject/.editorconfig" spellcheck="false"></div>
+          <div>
+            <textarea name="file" spellcheck="false">[*]
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{css,html,js}]
+indent_style = space
+indent_size = 2
+
+[*.py]
+indent_style = space
+indent_size = 4
+</textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="js-ec-demo-output demo-section">
+        <h4>Enforced Style for a Given File</h4>
+        <div class="code-container">
+          <div><input name="filename" value="/someproject/index.html" spellcheck="false"></div>
+          <div><pre class="properties"></pre></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </section>
 
 <section id="download">
