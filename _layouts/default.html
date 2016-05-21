@@ -9,14 +9,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>EditorConfig{% if page.title %}: {{ page.title }}{% endif %}</title>
-  <meta name="author" content="EditorConfig Team">
-  {% if page.description %}
-  <meta name="description" content="{{ page.description }}">
-  {% endif %}
-
+  <meta name="author" content="{% if page.author %}{{ page.author }}{% else %}EditorConfig Team{% endif %}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+  <link rel="alternate" href="{{ site.baseurl }}/blog/feed.xml" type="application/rss+xml" />
 
 </head>
 
@@ -25,29 +24,30 @@
 
   <div id="sidebar">
     <div itemscope itemtype="http://schema.org/Organization">
-      <a class="logo" href=""><img itemprop="logo" src="logo.png" alt="EditorConfig mouse head"></a>
+      <a class="logo" href="{{ site.baseurl }}/"><img itemprop="logo" src="{{ site.baseurl }}/logo.png" alt="EditorConfig mouse head"></a>
     </div>
     <nav>
     <h4><a href="">Page Contents</a></h4>
     <ol data-scrollspy="scrollspy">
-      <li><a href="#overview">What is EditorConfig?</a></li>
-      <li><a href="#example-file">Example File</a></li>
-      <li><a href="#file-location">File Location</a></li>
-      <li><a href="#file-format-details">File Format Details</a></li>
-      <li><a href="#download">Download a Plugin</a></li>
-      <li><a href="#contributing">Contributing</a></li>
+      <li><a href="{{ site.baseurl }}/#overview">What is EditorConfig?</a></li>
+      <li><a href="{{ site.baseurl }}/#example-file">Example File</a></li>
+      <li><a href="{{ site.baseurl }}/#file-location">File Location</a></li>
+      <li><a href="{{ site.baseurl }}/#file-format-details">File Format Details</a></li>
+      <li><a href="{{ site.baseurl }}/#download">Download a Plugin</a></li>
+      <li><a href="{{ site.baseurl }}/#contributing">Contributing</a></li>
     </ol>
+    <h4><a href="{{ site.baseurl }}/blog">Blog</a></h4>
     </nav>
 
     <a href="https://github.com/editorconfig/" class="github button">
       <strong>Project Page on GitHub</strong>
-      <img src="fork-editorconfig.png" alt="mouse with fork"> 
+      <img src="{{ site.baseurl }}/fork-editorconfig.png" alt="mouse with fork">
       <div style="clear: both;"></div>
     </a>
 
     <a href="https://twitter.com/EditorConfig" class="twitter button">
       <strong>Follow Us on Twitter</strong>
-      <img src="tweet-editorconfig.png" alt="mouse riding bird">
+      <img src="{{ site.baseurl }}/tweet-editorconfig.png" alt="mouse riding bird">
       <div style="clear: both;"></div>
     </a>
 
@@ -55,6 +55,8 @@
     <a href="https://twitter.com/share" class="twitter-share-button social-sharing-button" data-via="EditorConfig" data-size="medium">Tweet</a>
     <!-- Google plus one -->
     <div class="g-plusone social social-sharing-button" data-size="medium"></div>
+    <!-- RSS Feed icon -->
+    <a href="{{ site.baseurl}}/blog/feed.xml"><img src="{{ site.baseurl}}/blog/feed-icon.svg" alt="RSS feed icon" title="Subscribe to blog posts" /></a>
     <div style="clear: both;"></div>
 
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -65,7 +67,8 @@
        po.src = 'https://apis.google.com/js/plusone.js';
        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
        })();
-     </script>
+    </script>
+
   </div>
 
   <div id="content">
@@ -86,6 +89,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/1.4.0/js/bootstrap-scrollspy.min.js"></script>
 
+{% if site.analytics == 'google' %}
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -100,6 +104,6 @@
   })();
 
 </script>
-
+{% endif%}
 </body>
 </html>

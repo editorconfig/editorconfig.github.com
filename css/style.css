@@ -1,12 +1,12 @@
-/* 
+/*
  * HTML5 ✰ Boilerplate
  *
- * What follows is the result of much research on cross-browser styling. 
+ * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  *
  * Detailed information about this CSS: h5bp.com/css
- * 
+ *
  * ==|== normalize ==========================================================
  */
 
@@ -141,7 +141,7 @@ header h1 { padding-top: 0.5em; }
 
 #sidebar .social-sharing-button {float: left; display: inline-block;}
 
-/* 
+/*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate
  * Also: hot pink! (or customize the background color to match your design)
@@ -245,7 +245,7 @@ table tbody th {
 }
 
 /* =============================================================================
-   Pygments highlighting styles 
+   Pygments highlighting styles
    Colors based on solarized <http://ethanschoonover.com/solarized>
    ========================================================================== */
 
@@ -259,7 +259,7 @@ table tbody th {
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
- 
+
 @media print {
   * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
   a, a:visited { text-decoration: underline; }
@@ -273,4 +273,25 @@ table tbody th {
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
+}
+
+/* =============================================================================
+   Blog posts
+   ========================================================================== */
+
+.post-read-more {
+  font-size: 0.9em;
+}
+
+.post-date {
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+ul.post-arch {
+  padding-left: 0.5em;
+}
+
+li.post-arch {
+  list-style: none;
 }
