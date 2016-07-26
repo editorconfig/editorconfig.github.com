@@ -15,7 +15,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
-  <link rel="alternate" href="{{ site.baseurl }}/blog/feed.xml" type="application/rss+xml" />
+  <link rel="alternate" href="{{ site.baseurl }}/blog/feed.xml" type="application/rss+xml">
 
 </head>
 
@@ -27,7 +27,6 @@
       <a class="logo" href="{{ site.baseurl }}/"><img itemprop="logo" src="{{ site.baseurl }}/logo.png" alt="EditorConfig mouse head"></a>
     </div>
     <nav>
-    <h4><a href="">Page Contents</a></h4>
     <ol data-scrollspy="scrollspy">
       <li><a href="{{ site.baseurl }}/#overview">What is EditorConfig?</a></li>
       <li><a href="{{ site.baseurl }}/#example-file">Example File</a></li>
@@ -35,8 +34,8 @@
       <li><a href="{{ site.baseurl }}/#file-format-details">File Format Details</a></li>
       <li><a href="{{ site.baseurl }}/#download">Download a Plugin</a></li>
       <li><a href="{{ site.baseurl }}/#contributing">Contributing</a></li>
+      <li><a href="{{ site.baseurl }}/blog"><strong>Blog</strong></a></li>
     </ol>
-    <h4><a href="{{ site.baseurl }}/blog">Blog</a></h4>
     </nav>
 
     <a href="https://github.com/editorconfig/" class="github button">
@@ -51,12 +50,12 @@
       <div style="clear: both;"></div>
     </a>
 
+    <!-- RSS Feed icon -->
+    <div class="social-sharing-button"><a href="{{ site.baseurl}}/blog/feed.xml"><img src="{{ site.baseurl}}/blog/feed-icon.svg" alt="RSS feed icon" title="Subscribe to blog posts"></a></div>
     <!-- tweet button -->
     <a href="https://twitter.com/share" class="twitter-share-button social-sharing-button" data-via="EditorConfig" data-size="medium">Tweet</a>
     <!-- Google plus one -->
     <div class="g-plusone social social-sharing-button" data-size="medium"></div>
-    <!-- RSS Feed icon -->
-    <a href="{{ site.baseurl}}/blog/feed.xml"><img src="{{ site.baseurl}}/blog/feed-icon.svg" alt="RSS feed icon" title="Subscribe to blog posts" /></a>
     <div style="clear: both;"></div>
 
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

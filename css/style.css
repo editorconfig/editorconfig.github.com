@@ -139,7 +139,7 @@ header h1 { padding-top: 0.5em; }
 #sidebar .twitter.button img { max-width: 3.3em; }
 #sidebar .twitter.button strong { max-width: 5.0em; }
 
-#sidebar .social-sharing-button {float: left; display: inline-block;}
+#sidebar .social-sharing-button {display: inline-block;}
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
