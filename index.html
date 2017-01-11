@@ -112,6 +112,8 @@ indent_size = 2
 
     <p>It is acceptable and often preferred to leave certain EditorConfig properties unspecified.  For example, <strong><code>tab_width</code></strong> need not be specified unless it differs from the value of <strong><code>indent_size</code></strong>.  Also, when <strong><code>indent_style</code></strong> is set to <q>tab</q>, it may be desirable to leave <strong><code>indent_size</code></strong> unspecified so readers may view the file using their preferred indentation width.  Additionally, if a property is not standardized in your project (<strong><code>end_of_line</code></strong> for example), it may be best to leave it blank.</p>
 
+    <p>For any property, a value of <q>unset</q> is to remove the effect of that property, even if it has been set before. For example, add <q>indent_size = unset</q> to undefine <strong><code>indent_size</code></strong> property (and use editor default).</p>
+
   </section>
 
 </section>
