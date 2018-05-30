@@ -1,4 +1,4 @@
-This is the source of the website http://editorconfig.org/
+This is the source of the website https://editorconfig.org/
 
 To update the website, push the master branch
 
