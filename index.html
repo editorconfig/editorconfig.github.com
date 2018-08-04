@@ -61,9 +61,9 @@ indent_size = 2
   <section id="file-location">
     <h3>Where are these files stored?</h3>
 
-    <p>When opening a file, EditorConfig plugins look for a file named <code>.editorconfig</code> in the directory of the opened file and in every parent directory.  A search for <code>.editorconfig</code> files will stop if the root filepath is reached or an EditorConfig file with <code>root=true</code> is found.
+    <p>When opening a file, EditorConfig plugins look for a file named <code>.editorconfig</code> in the directory of the opened file and in every parent directory.  A search for <code>.editorconfig</code> files will stop if the root filepath is reached or an EditorConfig file with <code>root=true</code> is found.</p>
 
-    <p>EditorConfig files are read top to bottom and the closest EditorConfig files are read last.  Properties from matching EditorConfig sections are applied in the order they were read, so properties in closer files take precedence.</p>
+    <p>EditorConfig files are read top to bottom and the most recent rules found take precedence.  Properties from matching EditorConfig sections are applied in the order they were read, so properties in closer files take precedence.</p>
 
     <p><strong>For Windows Users:</strong> To create an <code>.editorconfig</code> file within Windows Explorer, you need to create a file named <code>.editorconfig.</code>, which Windows Explorer will automatically rename to <code>.editorconfig</code>.</p>
   </section>
@@ -71,7 +71,7 @@ indent_size = 2
   <section id="file-format-details">
     <h3>File Format Details</h3>
 
-    <p>EditorConfig files use an INI format that is compatible with the format used by <a href="https://docs.python.org/2/library/configparser.html">Python ConfigParser Library</a>, but <code>[</code> and <code>]</code> are allowed in the section names. The section names are filepath <a href="https://en.wikipedia.org/wiki/Glob_(programming)">globs</a> (case sensitive), similar to the format accepted by <a href="http://manpages.ubuntu.com/manpages/intrepid/man5/gitignore.5.html#contenttoc2">gitignore</a>. Only forward slashes (<code>/</code>, not backslashes) are used as path separators and octothorpes (<code>#</code>) or semicolons (<code>;</code>) are used for comments. Comments should go on their own lines. EditorConfig files should be UTF-8 encoded, with either <code><abbr title="Carriage Return Line Feed">CRLF</abbr></code> or <code><abbr title="Line Feed">LF</abbr></code> line separators.</p>
+    <p>EditorConfig files use an INI format that is compatible with the format used by <a href="https://docs.python.org/2/library/configparser.html">Python ConfigParser Library</a>, but <code>[</code> and <code>]</code> are allowed in the section names. The section names are filepath <a href="https://en.wikipedia.org/wiki/Glob_(programming)">globs</a> (case sensitive), similar to the format accepted by <a href="http://manpages.ubuntu.com/manpages/intrepid/man5/gitignore.5.html#contenttoc2">gitignore</a>. Only forward slashes (<code>/</code>, not backslashes) are used as path separators and octothorpes (<code>#</code>) or semicolons (<code>;</code>) are used for comments. Comments should go on their own lines. EditorConfig files should be UTF-8 encoded, with either <code><abbr title="Carriage Return Line Feed">CRLF</abbr></code> or <code><abbr title="Line Feed">LF</abbr></code> line separators. EditorConfig files are read top to bottom and the most recent rules found take precedence.</p>
 
     <p>Filepath glob patterns and currently-supported EditorConfig properties are explained below.</p>
   </section>
