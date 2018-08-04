@@ -20,7 +20,7 @@ description: EditorConfig is a file format and collection of text editor plugins
     <p>Below is an example <code>.editorconfig</code> file setting end-of-line and indentation styles for Python and JavaScript files.</p>
       <div class="code-container">
 {% highlight ini %}
-# EditorConfig is awesome: http://EditorConfig.org
+# EditorConfig is awesome: https://EditorConfig.org
 
 # top-most EditorConfig file
 root = true
@@ -71,7 +71,7 @@ indent_size = 2
   <section id="file-format-details">
     <h3>File Format Details</h3>
 
-    <p>EditorConfig files use an INI format that is compatible with the format used by <a href="https://docs.python.org/2/library/configparser.html">Python ConfigParser Library</a>, but <code>[</code> and <code>]</code> are allowed in the section names. The section names are filepath <a href="https://en.wikipedia.org/wiki/Glob_(programming)">globs</a> (case sensitive), similar to the format accepted by <a href="http://manpages.ubuntu.com/manpages/intrepid/man5/gitignore.5.html#contenttoc2">gitignore</a>. Only forward slashes (<code>/</code>, not backslashes) are used as path separators and octothorpes (<code>#</code>) or semicolons (<code>;</code>) are used for comments. Comments should go on their own lines. EditorConfig files should be UTF-8 encoded, with either <code><abbr title="Carriage Return Line Feed">CRLF</abbr></code> or <code><abbr title="Line Feed">LF</abbr></code> line separators. EditorConfig files are read top to bottom and the most recent rules found take precedence.</p>
+    <p>EditorConfig files use an INI format that is compatible with the format used by <a href="https://docs.python.org/2/library/configparser.html">Python ConfigParser Library</a>, but <code>[</code> and <code>]</code> are allowed in the section names. The section names are filepath <a href="https://en.wikipedia.org/wiki/Glob_(programming)">globs</a> (case sensitive), similar to the format accepted by <a href="https://git-scm.com/docs/gitignore#_pattern_format">gitignore</a>. Only forward slashes (<code>/</code>, not backslashes) are used as path separators and octothorpes (<code>#</code>) or semicolons (<code>;</code>) are used for comments. Comments should go on their own lines. EditorConfig files should be UTF-8 encoded, with either <code><abbr title="Carriage Return Line Feed">CRLF</abbr></code> or <code><abbr title="Line Feed">LF</abbr></code> line separators. EditorConfig files are read top to bottom and the most recent rules found take precedence.</p>
 
     <p>Filepath glob patterns and currently-supported EditorConfig properties are explained below.</p>
   </section>
@@ -108,11 +108,9 @@ indent_size = 2
       <li><dfn><code>root</code></dfn>: special property that should be specified at the top of the file outside of any sections.  Set to <q>true</q> to stop <code>.editorconfig</code> files search on current file.</li>
     </ul>
 
-    <p>Currently all properties and values are case-insensitive. They are lowercased when parsed. Generally, if a property is not specified, the editor settings will be used, i.e. EditorConfig takes no effect on that part.</p>
+    <p>Currently all properties and values are case-insensitive. They are lowercased when parsed. Generally, if a property is not specified, the editor settings will be used, i.e. EditorConfig takes no effect on that part. For any property, a value of <q>unset</q> is to remove the effect of that property, even if it has been set before. For example, add <q>indent_size = unset</q> to undefine <strong><code>indent_size</code></strong> property (and use editor default).</p>
 
     <p>It is acceptable and often preferred to leave certain EditorConfig properties unspecified.  For example, <strong><code>tab_width</code></strong> need not be specified unless it differs from the value of <strong><code>indent_size</code></strong>.  Also, when <strong><code>indent_style</code></strong> is set to <q>tab</q>, it may be desirable to leave <strong><code>indent_size</code></strong> unspecified so readers may view the file using their preferred indentation width.  Additionally, if a property is not standardized in your project (<strong><code>end_of_line</code></strong> for example), it may be best to leave it blank.</p>
-
-    <p>For any property, a value of <q>unset</q> is to remove the effect of that property, even if it has been set before. For example, add <q>indent_size = unset</q> to undefine <strong><code>indent_size</code></strong> property (and use editor default).</p>
 
   </section>
 
@@ -127,13 +125,18 @@ indent_size = 2
   <ul class="editor-logos">
     <li><a href="http://barebones.com/support/technotes/editorconfig.html"><img src="logos/bbedit.png" alt="BBEdit"><span>BBEdit</span></a></li>
     <li><a href="https://github.com/eranif/codelite/tree/master/EditorConfigPlugin"><img src="logos/codelite.png" alt="CodeLite"><span>CodeLite</span></a></li>
+    <li><a href="https://github.com/elementary/code#readme"><img src="logos/elementary-code.png" alt="elementary Code"><span>elementary Code</span></a></li>
     <li><a href="https://wiki.gnome.org/Apps/Builder/Features#EditorConfig"><img src="logos/gnome-builder.png" alt="GNOME Builder" title="GNOME Builder"><span>GNOME Builder</span></a></li>
     <li><a href="https://github.com/RReverser/github-editorconfig#readme"><img src="logos/github.png" alt="GitHub" title="GitHub (code viewer and editor)"><span>GitHub</span></a></li>
     <li><a href="https://gogs.io"><img src="logos/gogs.png" alt="Gogs"><span>Gogs</span></a></li>
     <li><a href="https://github.com/JetBrains/intellij-community/tree/master/plugins/editorconfig"><img src="logos/intellijIDEA.png" alt="intelliJ logo"><span>intelliJ</span></a></li>
     <li><a href="https://api.kde.org/frameworks/ktexteditor/html/"><img src="logos/ktexteditor.png" alt="KTextEditor"><span>KTextEditor</span></a></li>
     <li><a href="https://www.activestate.com/blog/2015/07/editorconfig-your-komodo"><img src="logos/komodo.png" alt="Komodo"><span>Komodo</span></a></li>
+    <li><a href="http://kakoune.org/"><img src="logos/kakoune.png" alt="Kakoune"><span>Kakoune</span></a></li>
+    <li><a href="https://github.com/mikerochip/editorconfig-monodevelop#readme"><img src="logos/monodevelop.png" alt="MonoDevelop"><span>MonoDevelop</span></a></li>
     <li><a href="https://plugins.jetbrains.com/plugin/7294"><img src="logos/pyCharm.png" alt="PyCharm"><span>PyCharm</span></a></li>
+    <li><a href="https://github.com/JetBrains/intellij-community/tree/master/plugins/editorconfig"><img src="logos/reSharper.png" alt="ReSharper"><span>ReSharper</span></a></li>
+    <li><a href="https://github.com/JetBrains/intellij-community/tree/master/plugins/editorconfig"><img src="logos/rider.png" alt="Rider"><span>Rider</span></a></li>
     <li><a href="https://github.com/JetBrains/intellij-community/tree/master/plugins/editorconfig"><img src="logos/rubyMine.png" alt="RubyMine"><span>RubyMine</span></a></li>
     <li><a href="https://www.sourcelair.com/features/editorconfig"><img src="logos/sourcelair.png" alt="SourcLair"><span>SourcLair</span></a></li>
     <li><a href="https://tortoisegit.org/"><img src="logos/TortoiseGit.png" alt="TortoiseGit"><span>TortoiseGit</span></a></li>
@@ -144,6 +147,7 @@ indent_size = 2
 
   <h2>Download a Plugin</h2>
 
+  <h3>Editor</h3>
   <p>To use EditorConfig with one of these editors, you will need to install a plugin.</p>
 
   <ul class="editor-logos">
@@ -167,8 +171,17 @@ indent_size = 2
     <li><a href="https://github.com/Mr0grog/editorconfig-textmate#readme"><img src="logos/textmate.png" alt="TextMate"><span>TextMate</span></a></li>
     <li><a href="https://github.com/editorconfig/editorconfig-vim#readme"><img src="logos/vim.png" alt="Vim"><span>Vim</span></a></li>
     <li><a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig"><img src="logos/visualstudio-code.png" alt="Visual Studio Code"><span>Visual Studio Code</span></a></li>
-    <li><a href="https://github.com/MarcoSero/EditorConfig-Xcode"><img src="logos/xcode.png" alt="Xcode"><span>Xcode</span></a></li>
   </ul>
+
+  <div style="clear: both;"></div>
+
+  <h3>Headless Tool</h3>
+  <p>To use EditorConfig with one of these headless tools, you will need to install a plugin.</p>
+
+  <ul class="editor-logos">
+    <li><a href="https://ec4j.github.io/editorconfig-maven-plugin/"><img src="logos/maven.png" alt="Maven"><span>Maven</span></a></li>
+  </ul>
+
   <div style="clear: both;"></div>
 
 </section>
@@ -186,8 +199,8 @@ indent_size = 2
   <section id="create-a-plugin">
     <h3>Create a plugin</h3>
 
-    <p>EditorConfig plugins can be developed by using one of the EditorConfig core libraries.  The EditorConfig core libraries accept as input the file being edited, find and parse relevant <code>.editorconfig</code> files, and pass back the properties that should be used. Please ignore any unrecognized properties and property values in your editor plugin for future compatibility, since new properties and permitted values will be added in the future. Currently there is a <a href="https://github.com/editorconfig/editorconfig-core-c#readme">C library</a>, a <a href="https://github.com/editorconfig/editorconfig-core-py#readme">Python library</a>, a <a href="https://github.com/editorconfig/editorconfig-core-js#readme">JavaScript library</a>, two Java libraries (<a href="https://github.com/editorconfig/editorconfig-core-java#readme">EditorConfig Core Java Library</a> and <a href="https://github.com/ec4j/ec4j#readme">ec4j</a>), a <a href="https://github.com/editorconfig/editorconfig-core-lua#readme">lua library</a>, a <a href="https://github.com/editorconfig/editorconfig-core-net#readme">.NET library</a>, and a <a href="https://github.com/editorconfig/editorconfig-core-ruby">Ruby library</a>.</p>
-    <p>If you are planning on creating a new plugin, use the <a href="http://groups.google.com/group/editorconfig">mailing list</a> to let us know so we can help out and link to your plugin once it's created.  If you plan on using one of the EditorConfig cores as a library or command line interface, the <a href="http://docs.editorconfig.org">C library documentation</a>, <a href="http://pydocs.editorconfig.org">Python library documentation</a> or <a href="http://javadocs.editorconfig.org">Java library documentation</a> may be helpful.</p>
+    <p>EditorConfig plugins can be developed by using one of the EditorConfig core libraries.  The EditorConfig core libraries accept as input the file being edited, find and parse relevant <code>.editorconfig</code> files, and pass back the properties that should be used. Please ignore any unrecognized properties and property values in your editor plugin for future compatibility, since new properties and permitted values will be added in the future. Currently there is a <a href="https://github.com/editorconfig/editorconfig-core-c#readme">C library</a>, a <a href="https://github.com/editorconfig/editorconfig-core-py#readme">Python library</a>, a <a href="https://github.com/editorconfig/editorconfig-core-js#readme">JavaScript library</a>, two Java libraries (<a href="https://github.com/editorconfig/editorconfig-core-java#readme">EditorConfig Core Java Library</a> and <a href="https://github.com/ec4j/ec4j#readme">ec4j</a>), a <a href="https://github.com/editorconfig/editorconfig-core-lua#readme">Lua library</a>, a <a href="https://github.com/editorconfig/editorconfig-core-net#readme">.NET library</a>, and a <a href="https://github.com/editorconfig/editorconfig-core-ruby">Ruby library</a>.</p>
+    <p>If you are planning on creating a new plugin, use the <a href="https://groups.google.com/group/editorconfig">mailing list</a> to let us know so we can help out and link to your plugin once it's created.  If you plan on using one of the EditorConfig cores as a library or command line interface, the <a href="http://docs.editorconfig.org">C library documentation</a>, <a href="http://pydocs.editorconfig.org">Python library documentation</a> or <a href="http://javadocs.editorconfig.org">Java library documentation</a> may be helpful.</p>
     <p>More details can be found on the <a href="https://github.com/editorconfig/editorconfig/wiki/Plugin-How-To">Plugin-How-To wiki page</a>.</p>
   </section>
 
@@ -225,7 +238,7 @@ indent_size = 2
       <li>Vim plugin: <a href="http://www.topbug.net">Hong Xu</a>, <a href="http://treyhunner.com">Trey Hunner</a></li>
       <li>Visual Studio plugin: <a href="http://www.swansontec.com">William Swanson</a>, <a href="https://github.com/nulltoken">nulltoken</a>,
                                 <a href="http://localghost.io/">Martijn Laarman</a>, <a href="http://kinddragon.blogspot.com">Arkadiy Shapkin</a>,
-                                <a href="http://github.com/chrisdias">Chris Dias</a> (for VS Code)</li>
+                                <a href="https://github.com/chrisdias">Chris Dias</a> (for VS Code)</li>
       <li>Xcode plugin: <a href="http://marcosero.com/">Marco Sero</a></li>
     </ul>
 
