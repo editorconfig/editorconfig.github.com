@@ -1,11 +1,29 @@
+# EditorConfig website
+
 This is the source of the website https://editorconfig.org/
 
-To update the website, push the master branch
+The EditorConfig website are static HTML pages that are generated with [Jekyll](https://jekyllrb.com/) and it is hosted on [GitHub Pages](https://pages.github.com/). Every `git push` to the `master` branch automatically updates the website.
 
-To run in development mode:
-``jekyll serve --config _config.yml,_config-dev.yml``
+## Local development
 
-This way google analytics is disabled during testing and the url will be changed to `localhost:4000`.
+For local development make sure Ruby and Jekyll are installed as described in the [Jekyll docs](https://jekyllrb.com/docs/installation/).
+
+[Jekyll Environments](https://jekyllrb.com/docs/configuration/environments/) are used to distinguish between development and production. In the production environment Google Analytics is enabled.
+
+To run the development environment simply use:
+
+```bash
+jekyll serve
+```
+
+To run the production environment locally use:
+```bash
+JEKYLL_ENV=production jekyll serve
+```
+
+GitHub Pages automatically build and runs the site in the production environment.
+
+## Blog
 
 To add posts to the blog, add a page in the `_posts` subdir as described in [Jekyll docs](https://jekyllrb.com/docs/posts/). Create a [pull request](https://github.com/editorconfig/editorconfig.github.com/pulls) to get your post included on the website.
 
