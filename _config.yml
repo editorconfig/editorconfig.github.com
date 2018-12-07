@@ -2,5 +2,4 @@ title: "EditorConfig"
 description: "EditorConfig helps developers define and maintain consistent coding styles between different editors and IDEs."
 url: https://editorconfig.org
 permalink: pretty
-analytics: google
 exclude: [ 'ReadMe.md', '.gitignore', '.editorconfig' ]
