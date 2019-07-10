@@ -54,3 +54,9 @@ author: "Your Name"
 Use `date` to add a specific time to a post. Otherwise "00:00:00" will be used.
 
 If you don't use `author`, `EditorConfig Team` will be used in the RSS feed and page header.
+
+## License
+
+The EditorConfig website is licensed under a [Creative Commons Attribution 3.0 Unported License][].
+
+[Creative Commons Attribution 3.0 Unported License]: http://creativecommons.org/licenses/by/3.0/
