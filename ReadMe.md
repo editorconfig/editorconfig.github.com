@@ -8,7 +8,7 @@ The EditorConfig website are static HTML pages that are generated with [Jekyll](
 
 For local development make sure Ruby and Jekyll are installed as described in the [Jekyll docs](https://jekyllrb.com/docs/installation/).
 
-[Jekyll Environments](https://jekyllrb.com/docs/configuration/environments/) are used to distinguish between development and production. In the production environment Google Analytics is enabled.
+[Jekyll Environments](https://jekyllrb.com/docs/configuration/environments/) are used to distinguish between development and production. In the production environment Google Analytics and Carbon Ads are enabled.
 
 To run the development environment simply use:
 
