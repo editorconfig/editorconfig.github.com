@@ -59,6 +59,8 @@ footer { margin: 1em; font-size: 0.75em; text-align: center; }
   clear: both;
 }
 .container > #sidebar {
+  height: 100vh;
+  overflow: scroll;
   position: fixed;
   top: 0;
   width: 11em;
