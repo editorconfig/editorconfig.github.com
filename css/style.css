@@ -201,6 +201,7 @@ header h1 { padding-top: 0.5em; }
 ::-moz-selection { background: #2953a6; color: #fff; text-shadow: none; }
 ::selection { background: #2953a6; color: #fff; text-shadow: none; }
 
+
 /* =============================================================================
    Links
    ========================================================================== */
@@ -212,6 +213,7 @@ a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
 a:hover, a:active { outline: 0; }
+
 
 /* =============================================================================
    Typography
