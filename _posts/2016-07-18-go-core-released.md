@@ -23,4 +23,4 @@ Contributions are also welcome.
 
 [gopkg]: http://gopkg.in/editorconfig/editorconfig-core-go.v1
 [github]: https://github.com/editorconfig/editorconfig-core-go
-[issuetracker]: https://github.com/editorconfig/editorconfig-core-go/issues 
+[issuetracker]: https://github.com/editorconfig/editorconfig-core-go/issues
