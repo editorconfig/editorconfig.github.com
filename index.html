@@ -5,7 +5,9 @@ description: EditorConfig is a file format and collection of text editor plugins
 
 <section id="overview">
 
-  <h2>What is EditorConfig?</h2>
+  <a href="#overview" class="anchor">
+    <h2>What is EditorConfig?</h2>
+  </a>
 
   <p>EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs.  The EditorConfig project consists of <strong>a file format</strong> for defining coding styles and a collection of <strong>text editor plugins</strong> that enable editors to read the file format and adhere to defined styles.  EditorConfig files are easily readable and they work nicely with version control systems.</p>
 
@@ -13,12 +15,16 @@ description: EditorConfig is a file format and collection of text editor plugins
 
 <section id="file-format">
 
-  <h2>What's an EditorConfig file look like?</h2>
+  <a href="#file-format" class="anchor">
+    <h2>What's an EditorConfig file look like?</h2>
+  </a>
 
   <p><em>(A <a href="https://spec.editorconfig.org/">formal specification of EditorConfig</a> is also available.)</em></p>
 
   <section id="example-file">
-    <h3>Example file</h3>
+    <a href="#example-file" class="anchor">
+      <h3>Example file</h3>
+    </a>
     <p>Below is an example <code>.editorconfig</code> file setting end-of-line and indentation styles for Python and JavaScript files.</p>
     <div class="code-container">
 {% highlight ini %}
@@ -61,7 +67,9 @@ indent_size = 2
   </section>
 
   <section id="file-location">
-    <h3>Where are these files stored?</h3>
+    <a href="#file-location" class="anchor">
+      <h3>Where are these files stored?</h3>
+    </a>
 
     <p>When opening a file, EditorConfig plugins look for a file named <code>.editorconfig</code> (all lowercase) in the directory of the opened file and in every parent directory.  A search for <code>.editorconfig</code> files will stop if the root filepath is reached or an EditorConfig file with <code>root=true</code> is found.</p>
 
@@ -71,7 +79,9 @@ indent_size = 2
   </section>
 
   <section id="file-format-details">
-    <h3>File Format Details</h3>
+    <a href="#file-format-details" class="anchor">
+      <h3>File Format Details</h3>
+    </a>
 
     <p>EditorConfig files use an INI format that is compatible with the format used by <a href="https://docs.python.org/2/library/configparser.html">Python ConfigParser Library</a>, but <code>[</code> and <code>]</code> are allowed in the section names. The section names are filepath <a href="https://en.wikipedia.org/wiki/Glob_(programming)">globs</a> (case sensitive), similar to the format accepted by <a href="https://git-scm.com/docs/gitignore#_pattern_format">gitignore</a>. Only forward slashes (<code>/</code>, not backslashes) are used as path separators and octothorpes (<code>#</code>) or semicolons (<code>;</code>) are used for comments. Comments should go on their own lines. EditorConfig files should be UTF-8 encoded, with either <code><abbr title="Carriage Return Line Feed">CRLF</abbr></code> or <code><abbr title="Line Feed">LF</abbr></code> line separators. EditorConfig files are read top to bottom and the most recent rules found take precedence.</p>
 
@@ -79,7 +89,9 @@ indent_size = 2
   </section>
 
   <section id="wildcards">
-    <h4>Wildcard Patterns</h4>
+    <a href="#wildcards" class="anchor">
+      <h4>Wildcard Patterns</h4>
+    </a>
 
     <p>Special characters recognized in section names for wildcard matching:</p>
 
@@ -97,7 +109,9 @@ indent_size = 2
   </section>
 
   <section id="supported-properties">
-    <h4>Supported Properties</h4>
+    <a href="#supported-properties" class="anchor">
+      <h4>Supported Properties</h4>
+    </a>
     <p>Note that not all properties are supported by every plugin. The wiki has a <a href="https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties">complete list of properties</a>.</p>
     <ul class="property-definitions">
       <li><dfn><code>indent_style</code></dfn>: set to <q>tab</q> or <q>space</q> to use hard tabs or soft tabs respectively.</li>
@@ -120,7 +134,9 @@ indent_size = 2
 
 <section id="pre-installed">
 
-  <h2>No Plugin Necessary</h2>
+  <a href="#pre-installed" class="anchor">
+    <h2>No Plugin Necessary</h2>
+  </a>
 
   <p>These editors come bundled with native support for EditorConfig.  Everything should just work.</p>
 
@@ -165,63 +181,80 @@ indent_size = 2
 
 <section id="download">
 
-  <h2 id="editor-plugins">Download a Plugin</h2>
+  <a href="#download" class="anchor">
+    <h2>Download a Plugin</h2>
+  </a>
 
-  <h3>Editor</h3>
-  <p>To use EditorConfig with one of these editors, you will need to install a plugin.</p>
+  <section id="editor-plugins">
+    <a href="#editor-plugins" class="anchor">
+      <h3>Editor</h3>
+    </a>
 
-  <ul class="editor-logos">
-    <li><a href="https://plugins.jetbrains.com/plugin/7294-editorconfig/"><img src="logos/appCode.png" alt="AppCode"><span>AppCode</span></a></li>
-    <li><a href="https://github.com/sindresorhus/atom-editorconfig#readme"><img src="logos/atom.png" alt="Atom"><span>Atom</span></a></li>
-    <li><a href="https://github.com/kidwm/brackets-editorconfig/"><img src="logos/brackets.png" alt="Brackets"><span>Brackets</span></a></li>
-    <li><a href="https://plugins.jetbrains.com/plugin/7294-editorconfig/"><img src="logos/clion.png" alt="CLion"><span>CLion</span></a></li>
-    <li><a href="https://panic.com/coda/plugins.php#Plugins"><img src="logos/coda.png" alt="Coda"><span>Coda</span></a></li>
-    <li><a href="https://github.com/editorconfig/editorconfig-codeblocks#readme"><img src="logos/codeblocks.png" alt="Code::Block"><span>Code::Block</span></a></li>
-    <li><a href="https://github.com/ncjones/editorconfig-eclipse#readme"><img src="logos/eclipse.png" alt="Eclipse"><span>Eclipse</span></a></li>
-    <li><a href="https://github.com/editorconfig/editorconfig-emacs#readme"><img src="logos/emacs.png" alt="Emacs"><span>Emacs</span></a></li>
-    <li><a href="https://github.com/nightroman/FarNet/tree/master/EditorKit"><img src="logos/far-manager.png" alt="Far Manager"><span>Far Manager</span></a></li>
-    <li><a href="https://github.com/editorconfig/editorconfig-geany#readme"><img src="logos/geany.png" alt="Geany"><span>Geany</span></a></li>
-    <li><a href="https://github.com/editorconfig/editorconfig-gedit#readme"><img src="logos/gedit.png" alt="Gedit"><span>Gedit</span></a></li>
-    <li><a href="https://github.com/editorconfig/editorconfig-jedit#readme"><img src="logos/jedit.png" alt="jEdit"><span>jEdit</span></a></li>
-    <li><a href="https://github.com/skalogryz/editorConfig/tree/master/lazideext"><img src="logos/lazarus.png" alt="Lazarus"><span>Lazarus</span></a></li>
-    <li><a href="https://github.com/10sr/editorconfig-micro#readme"><img src="logos/micro.png" alt="Micro"><span>Micro</span></a></li>
-    <li><a href="https://github.com/welovecoding/editorconfig-netbeans#readme"><img src="logos/NetBeans.png" alt="NetBeans"><span>NetBeans</span></a></li>
-    <li><a href="https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme"><img src="logos/notepad.png" alt="Notepad++"><span>Notepad++</span></a></li>
-    <li><a href="https://github.com/fszymanski/pluma-plugins/tree/master/editorconfig"><img src="logos/pluma.png" alt="Pluma"><span>Pluma</span></a></li>
-    <li><a href="https://github.com/sindresorhus/editorconfig-sublime#readme"><img src="logos/sublimetext.png" alt="Sublime Text"><span>Sublime Text</span></a></li>
-    <li><a href="https://github.com/editorconfig/editorconfig-textadept#readme"><img src="logos/textadept.png" alt="Textadept"><span>Textadept</span></a></li>
-    <li><a href="https://github.com/Mr0grog/editorconfig-textmate#readme"><img src="logos/textmate.png" alt="TextMate"><span>TextMate</span></a></li>
-    <li><a href="https://open-vsx.org/extension/EditorConfig/EditorConfig"><img src="logos/vscodium.png" alt="VSCodium"><span>VSCodium</span></a></li>
-    <li><a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig"><img src="logos/visualstudio-code.png" alt="Visual Studio Code"><span>Visual Studio Code</span></a></li>
-  </ul>
+    <p>To use EditorConfig with one of these editors, you will need to install a plugin.</p>
 
-  <div style="clear: both;"></div>
+    <ul class="editor-logos">
+      <li><a href="https://plugins.jetbrains.com/plugin/7294-editorconfig/"><img src="logos/appCode.png" alt="AppCode"><span>AppCode</span></a></li>
+      <li><a href="https://github.com/sindresorhus/atom-editorconfig#readme"><img src="logos/atom.png" alt="Atom"><span>Atom</span></a></li>
+      <li><a href="https://github.com/kidwm/brackets-editorconfig/"><img src="logos/brackets.png" alt="Brackets"><span>Brackets</span></a></li>
+      <li><a href="https://plugins.jetbrains.com/plugin/7294-editorconfig/"><img src="logos/clion.png" alt="CLion"><span>CLion</span></a></li>
+      <li><a href="https://panic.com/coda/plugins.php#Plugins"><img src="logos/coda.png" alt="Coda"><span>Coda</span></a></li>
+      <li><a href="https://github.com/editorconfig/editorconfig-codeblocks#readme"><img src="logos/codeblocks.png" alt="Code::Block"><span>Code::Block</span></a></li>
+      <li><a href="https://github.com/ncjones/editorconfig-eclipse#readme"><img src="logos/eclipse.png" alt="Eclipse"><span>Eclipse</span></a></li>
+      <li><a href="https://github.com/editorconfig/editorconfig-emacs#readme"><img src="logos/emacs.png" alt="Emacs"><span>Emacs</span></a></li>
+      <li><a href="https://github.com/nightroman/FarNet/tree/master/EditorKit"><img src="logos/far-manager.png" alt="Far Manager"><span>Far Manager</span></a></li>
+      <li><a href="https://github.com/editorconfig/editorconfig-geany#readme"><img src="logos/geany.png" alt="Geany"><span>Geany</span></a></li>
+      <li><a href="https://github.com/editorconfig/editorconfig-gedit#readme"><img src="logos/gedit.png" alt="Gedit"><span>Gedit</span></a></li>
+      <li><a href="https://github.com/editorconfig/editorconfig-jedit#readme"><img src="logos/jedit.png" alt="jEdit"><span>jEdit</span></a></li>
+      <li><a href="https://github.com/skalogryz/editorConfig/tree/master/lazideext"><img src="logos/lazarus.png" alt="Lazarus"><span>Lazarus</span></a></li>
+      <li><a href="https://github.com/10sr/editorconfig-micro#readme"><img src="logos/micro.png" alt="Micro"><span>Micro</span></a></li>
+      <li><a href="https://github.com/welovecoding/editorconfig-netbeans#readme"><img src="logos/NetBeans.png" alt="NetBeans"><span>NetBeans</span></a></li>
+      <li><a href="https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme"><img src="logos/notepad.png" alt="Notepad++"><span>Notepad++</span></a></li>
+      <li><a href="https://github.com/fszymanski/pluma-plugins/tree/master/editorconfig"><img src="logos/pluma.png" alt="Pluma"><span>Pluma</span></a></li>
+      <li><a href="https://github.com/sindresorhus/editorconfig-sublime#readme"><img src="logos/sublimetext.png" alt="Sublime Text"><span>Sublime Text</span></a></li>
+      <li><a href="https://github.com/editorconfig/editorconfig-textadept#readme"><img src="logos/textadept.png" alt="Textadept"><span>Textadept</span></a></li>
+      <li><a href="https://github.com/Mr0grog/editorconfig-textmate#readme"><img src="logos/textmate.png" alt="TextMate"><span>TextMate</span></a></li>
+      <li><a href="https://open-vsx.org/extension/EditorConfig/EditorConfig"><img src="logos/vscodium.png" alt="VSCodium"><span>VSCodium</span></a></li>
+      <li><a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig"><img src="logos/visualstudio-code.png" alt="Visual Studio Code"><span>Visual Studio Code</span></a></li>
+    </ul>
 
-  <h3>Headless Tool</h3>
-  <p>To use EditorConfig with one of these headless tools, you will need to install a plugin.</p>
+    <div style="clear: both;"></div>
+  </section>
 
-  <ul class="editor-logos">
-    <li><a href="https://github.com/ec4j/editorconfig-ant-tasks"><img src="logos/apache-ant.png" alt="Apache Ant"><span>Apache Ant</span></a></li>
-    <li><a href="https://github.com/ec4j/editorconfig-gradle-plugin"><img src="logos/gradle.png" alt="Gradle"><span>Gradle</span></a></li>
-    <li><a href="https://ec4j.github.io/editorconfig-maven-plugin/"><img src="logos/maven.png" alt="Maven"><span>Maven</span></a></li>
-  </ul>
+  <section id="headless-tool-plugins">
+    <a href="#headless-tool-plugins" class="anchor">
+      <h3>Headless Tool</h3>
+    </a>
+    <p>To use EditorConfig with one of these headless tools, you will need to install a plugin.</p>
 
-  <div style="clear: both;"></div>
+    <ul class="editor-logos">
+      <li><a href="https://github.com/ec4j/editorconfig-ant-tasks"><img src="logos/apache-ant.png" alt="Apache Ant"><span>Apache Ant</span></a></li>
+      <li><a href="https://github.com/ec4j/editorconfig-gradle-plugin"><img src="logos/gradle.png" alt="Gradle"><span>Gradle</span></a></li>
+      <li><a href="https://ec4j.github.io/editorconfig-maven-plugin/"><img src="logos/maven.png" alt="Maven"><span>Maven</span></a></li>
+    </ul>
+
+    <div style="clear: both;"></div>
+  </section>
 
 </section>
 
 <section id="contributing">
 
-  <h2>Contributing to EditorConfig</h2>
+  <a href="#contributing" class="anchor">
+    <h2>Contributing to EditorConfig</h2>
+  </a>
 
   <section id="feedback">
-    <h3>Give us your feedback</h3>
+    <a href="#feedback" class="anchor">
+      <h3>Give us your feedback</h3>
+    </a>
 
     <p>This project is greatly in need of feedback from other developers.  We want to hear ideas about how to make this project better.  Please use the <a href="http://groups.google.com/group/editorconfig">mailing list</a> to send an email to the EditorConfig team (subscribe by shooting an email to <a href="mailto:editorconfig+subscribe@googlegroups.com">editorconfig+subscribe@googlegroups.com</a>) and use the <a href="https://github.com/editorconfig/editorconfig/issues">issue tracker</a> to submit bugs (but please take a look at the <a href="https://github.com/editorconfig/editorconfig/wiki/FAQ">FAQ</a> first).  Also feel free to <a href="https://twitter.com/EditorConfig">tweet at us</a>.</p>
   </section>
 
   <section id="create-a-plugin">
-    <h3>Create an editor plugin</h3>
+    <a href="#create-a-plugin" class="anchor">
+      <h3>Create an editor plugin</h3>
+    </a>
 
     <p>
     EditorConfig editor plugins must follow the <a href="https://spec.editorconfig.org">specifications</a>. They can be developed with the help from one of the EditorConfig core libraries.
@@ -247,9 +280,11 @@ indent_size = 2
   </section>
 
   <section id="contributors">
-    <h3>Main Contributors</h3>
+    <a href="#contributors" class="anchor">
+      <h3>Main Contributors</h3>
+    </a>
 
-    <p>We have many awesome contributors contributing to the specification, core library, and plugins. For an up-to-date list, please see the <a href="https://github.com/editorconfig/editorconfig/wiki/Board-Member">Board Members page</a> and the <a href="https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/viewing-a-projects-contributors">contributor pages</a> of the <a href="https://github.com/editorconfig/specification/graphs/contributors">specification</a>, <a href="#core-libraries">core libraries</a>, and <a href="#editor-plugins">plugins</a>.</p>
+    <p>We have many awesome contributors contributing to the specification, core library, and plugins. For an up-to-date list, please see the <a href="https://github.com/editorconfig/editorconfig/wiki/Board-Member">Board Members page</a> and the <a href="https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/viewing-a-projects-contributors">contributor pages</a> of the <a href="https://github.com/editorconfig/specification/graphs/contributors">specification</a>, <a href="#core-libraries">core libraries</a>, and <a href="#download">plugins</a>.</p>
 
     <p>
     Most of of EditorConfig logos were drawn by <a href="https://squirrelmuffins.com">Kat On</a> and <a href="https://pittankopta.net/">Amon Keishima</a>. Website were mainly by <a href="https://treyhunner.com">Trey Hunner</a> and <a href="https://www.topbug.net">Hong Xu</a>.

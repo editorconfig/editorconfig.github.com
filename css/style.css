@@ -206,9 +206,12 @@ header h1 { padding-top: 0.5em; }
    ========================================================================== */
 
 a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
+a:visited:not(.anchor) { color: #551a8b; }
+a:hover, .anchor:hover, .anchor:focus { color: #06e; }
 a:focus { outline: thin dotted; }
+
+.anchor { color: #222; }
+.anchor:not(:hover):not(:focus) { text-decoration: none; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
 a:hover, a:active { outline: 0; }
