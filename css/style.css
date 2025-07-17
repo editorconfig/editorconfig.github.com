@@ -264,7 +264,7 @@ nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0
 
 nav ol { margin-top: 0; }
 
-ul.property-definitions { list-style: none; lyst-style-image: none; margin: 0; padding: 0; }
+ul.property-definitions { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 ul.property-definitions li { margin: 1em 0 1em 1em; }
 .property-definitions dfn { font-style: normal; font-weight: bold; }
 .property-definitions q { font-family: monospace; }
