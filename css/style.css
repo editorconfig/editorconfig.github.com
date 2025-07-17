@@ -47,7 +47,7 @@ footer { margin: 1em; font-size: 0.75em; text-align: center; }
   padding-right: 1.25em;
   zoom: 1;
   min-width: 40em;
-  max-width: 50em;
+  max-width: 60em;
   margin: 0 auto;
 }
 .container:before, .container:after {
