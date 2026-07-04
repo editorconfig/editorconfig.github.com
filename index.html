@@ -43,6 +43,10 @@ insert_final_newline = true
 [*.{js,py}]
 charset = utf-8
 
+# Exclude build artifacts and cache directories
+[*.{js,py}]
+exclude_patterns = "*.log, .cache, __pycache__, .git, node_modules, dist, build"
+
 # 4 space indentation
 [*.py]
 indent_style = space
@@ -121,6 +125,7 @@ indent_size = 2
       <li><dfn><code>charset</code></dfn>: set to <code>latin1</code>, <code>utf-8</code>, <code>utf-8-bom</code>, <code>utf-16be</code> or <code>utf-16le</code> to control the character set.</li>
       <li><dfn><code>trim_trailing_whitespace</code></dfn>: set to <code>true</code> to remove any whitespace characters preceding newline characters and <code>false</code> to ensure it doesn't.</li>
       <li><dfn><code>insert_final_newline</code></dfn>: set to <code>true</code> to ensure file ends with a newline when saving and <code>false</code> to ensure it doesn't.</li>
+      <li><dfn><code>exclude_patterns</code></dfn>: a list of glob patterns to exclude from file listings, search results, or indexing. Analogous to Sublime Text's <code>file_exclude_patterns</code>, <code>folder_exclude_patterns</code>, and <code>index_exclude_patterns</code>. Multiple patterns can be separated by commas or semicolons. Example: <code>exclude_patterns = *.log, .git, node_modules</code></li>
       <li><dfn><code>root</code></dfn>: special property that should be specified at the top of the file outside of any sections.  Set to <code>true</code> to stop <code>.editorconfig</code> files search on current file.</li>
     </ul>
 
